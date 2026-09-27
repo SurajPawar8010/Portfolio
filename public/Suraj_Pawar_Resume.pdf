@@ -1,0 +1,290 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 4620 >>
+stream
+0.05 0.08 0.15 rg
+0 740 595.28 102 re f
+0.06 0.73 0.85 rg
+0 737 595.28 3 re f
+BT
+/F2 22 Tf
+1 1 1 rg
+50 802 Td
+(SURAJ PAWAR) Tj
+ET
+BT
+/F1 11 Tf
+0.65 0.75 0.95 rg
+50 782 Td
+(Software Engineer | Java - Spring Boot - Microservices - React.js) Tj
+ET
+BT
+/F1 9 Tf
+0.85 0.90 0.95 rg
+50 754 Td
+(Pune District, Maharashtra, India  |  surajbalupawar1@gmail.com  |  +91 8010613284) Tj
+ET
+BT
+/F2 12 Tf
+0.1 0.2 0.45 rg
+50 710 Td
+(PROFESSIONAL SUMMARY) Tj
+ET
+0.8 0.85 0.9 rg
+50 706 495 1 re f
+BT
+/F1 9.5 Tf
+0.2 0.2 0.2 rg
+50 692 Td
+(Software Engineer at Nebula Technology with a solid foundation in Core Java backend architecture,) Tj
+ET
+BT
+/F1 9.5 Tf
+0.2 0.2 0.2 rg
+50 679 Td
+(Spring Boot microservices, RESTful API design, and modern responsive frontend engineering with) Tj
+ET
+BT
+/F1 9.5 Tf
+0.2 0.2 0.2 rg
+50 666 Td
+(React.js. Proven experience engineering enterprise Learning Management Systems \(LMS\) with Apache Kafka) Tj
+ET
+BT
+/F1 9.5 Tf
+0.2 0.2 0.2 rg
+50 653 Td
+(for event-driven streams, Redis for distributed caching, and Docker containerization.) Tj
+ET
+BT
+/F2 12 Tf
+0.1 0.2 0.45 rg
+50 630 Td
+(WORK EXPERIENCE) Tj
+ET
+0.8 0.85 0.9 rg
+50 626 495 1 re f
+BT
+/F2 10.5 Tf
+0.08 0.1 0.15 rg
+50 612 Td
+(Software Engineer - Nebula Technology) Tj
+ET
+BT
+/F2 9.5 Tf
+0.3 0.35 0.45 rg
+410 612 Td
+(Dec 2025 - Present | Pune, India) Tj
+ET
+BT
+/F1 9 Tf
+0.2 0.2 0.2 rg
+62 598 Td
+(-  Architecting and developing large-scale Enterprise Learning Management System \(LMS\) using Spring Boot microservices.) Tj
+ET
+BT
+/F1 9 Tf
+0.2 0.2 0.2 rg
+62 585.5 Td
+(-  Implemented Apache Kafka event streams for decoupled, high-throughput asynchronous communication between services.) Tj
+ET
+BT
+/F1 9 Tf
+0.2 0.2 0.2 rg
+62 573.0 Td
+(-  Integrated Redis caching mechanisms to optimize high-traffic database query performance and session persistence.) Tj
+ET
+BT
+/F1 9 Tf
+0.2 0.2 0.2 rg
+62 560.5 Td
+(-  Engineered scalable MySQL relational database schemas, query optimizations, and containerized Docker environments.) Tj
+ET
+BT
+/F2 10.5 Tf
+0.08 0.1 0.15 rg
+50 540.0 Td
+(Full Stack Developer Intern - Nebula Technology) Tj
+ET
+BT
+/F2 9.5 Tf
+0.3 0.35 0.45 rg
+385 540.0 Td
+(May 2025 - Nov 2025 | Pune, India) Tj
+ET
+BT
+/F1 9 Tf
+0.2 0.2 0.2 rg
+62 526.0 Td
+(-  Completed 6-month intensive full-stack internship focusing on Core Java, Spring Boot, Hibernate, and React.js.) Tj
+ET
+BT
+/F1 9 Tf
+0.2 0.2 0.2 rg
+62 513.5 Td
+(-  Built responsive, accessible web interfaces consuming secured REST APIs with role-based access control.) Tj
+ET
+BT
+/F1 9 Tf
+0.2 0.2 0.2 rg
+62 501.0 Td
+(-  Participated in agile sprints, code reviews, and Git collaborative version workflows.) Tj
+ET
+BT
+/F2 12 Tf
+0.1 0.2 0.45 rg
+50 478.5 Td
+(EDUCATION) Tj
+ET
+0.8 0.85 0.9 rg
+50 474.5 495 1 re f
+BT
+/F2 10.5 Tf
+0.08 0.1 0.15 rg
+50 460.5 Td
+(Bachelor of Science in Entire Computer Science \(B.Sc ECS\)) Tj
+ET
+BT
+/F2 9.5 Tf
+0.3 0.35 0.45 rg
+415 460.5 Td
+(Completed March 2025) Tj
+ET
+BT
+/F1 9.5 Tf
+0.25 0.25 0.25 rg
+50 446.5 Td
+(Karmaveer Bhaurao Patil Mahavidyalaya, Pandharpur, Dist-Solapur, Maharashtra) Tj
+ET
+BT
+/F1 8.5 Tf
+0.4 0.4 0.4 rg
+50 434.5 Td
+(Key Focus: Data Structures, OOP \(Java\), Database Management, Software Engineering, Web Technologies) Tj
+ET
+BT
+/F2 12 Tf
+0.1 0.2 0.45 rg
+50 418.5 Td
+(TECHNICAL SKILLS) Tj
+ET
+0.8 0.85 0.9 rg
+50 414.5 495 1 re f
+BT
+/F2 9.5 Tf
+0.1 0.15 0.3 rg
+50 400.5 Td
+(Backend Technologies:) Tj
+ET
+BT
+/F1 9 Tf
+0.25 0.25 0.25 rg
+175 400.5 Td
+(Core Java, Spring Boot, Hibernate, JDBC, RESTful APIs, Microservices Architecture) Tj
+ET
+BT
+/F2 9.5 Tf
+0.1 0.15 0.3 rg
+50 387.0 Td
+(Frontend Technologies:) Tj
+ET
+BT
+/F1 9 Tf
+0.25 0.25 0.25 rg
+175 387.0 Td
+(React.js, JavaScript \(ES6+\), HTML5, CSS3, Modern Responsive UI Design) Tj
+ET
+BT
+/F2 9.5 Tf
+0.1 0.15 0.3 rg
+50 373.5 Td
+(Streaming & Caching:) Tj
+ET
+BT
+/F1 9 Tf
+0.25 0.25 0.25 rg
+175 373.5 Td
+(Apache Kafka, Redis Distributed Caching) Tj
+ET
+BT
+/F2 9.5 Tf
+0.1 0.15 0.3 rg
+50 360.0 Td
+(Databases & DevOps:) Tj
+ET
+BT
+/F1 9 Tf
+0.25 0.25 0.25 rg
+175 360.0 Td
+(MySQL Relational Database, Docker, Git, GitHub, Maven) Tj
+ET
+BT
+/F2 12 Tf
+0.1 0.2 0.45 rg
+50 338.5 Td
+(VERIFIED INDUSTRY CERTIFICATIONS) Tj
+ET
+0.8 0.85 0.9 rg
+50 334.5 495 1 re f
+BT
+/F2 9.5 Tf
+0.08 0.1 0.15 rg
+50 320.5 Td
+(-  Commonwealth Bank - Software Engineering Job Simulation) Tj
+ET
+BT
+/F1 8.5 Tf
+0.35 0.4 0.5 rg
+415 320.5 Td
+(Forage | Completed Sept 2025) Tj
+ET
+BT
+/F2 9.5 Tf
+0.08 0.1 0.15 rg
+50 307.5 Td
+(-  DATACOM - Software Development Job Simulation) Tj
+ET
+BT
+/F1 8.5 Tf
+0.35 0.4 0.5 rg
+415 307.5 Td
+(Forage | Completed Sept 2025) Tj
+ET
+BT
+/F1 8 Tf
+0.55 0.55 0.55 rg
+185 25 Td
+(Suraj Pawar - Software Engineer Portfolio & Resume  |  +91 8010613284) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000263 00000 n 
+0000004935 00000 n 
+0000005005 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+5080
+%%EOF
