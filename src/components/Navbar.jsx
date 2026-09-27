@@ -163,14 +163,17 @@ export default function Navbar({
           </button>
         </div>
 
-        {/* Mobile Hamburger & Controls */}
-        <div className="flex sm:hidden items-center gap-2">
-          <button
-            onClick={handleSoundToggle}
-            className="p-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-xs"
-          >
-            {soundEnabled ? <Volume2 className="w-4 h-4 text-violet-400" /> : <VolumeX className="w-4 h-4" />}
-          </button>
+        {/* Mobile & Tablet Hamburger Controls */}
+        <div className="flex lg:hidden items-center gap-2">
+          {/* Audio toggle on mobile (<640px) where desktop actions are hidden */}
+          <div className="sm:hidden">
+            <button
+              onClick={handleSoundToggle}
+              className="p-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-xs"
+            >
+              {soundEnabled ? <Volume2 className="w-4 h-4 text-violet-400" /> : <VolumeX className="w-4 h-4" />}
+            </button>
+          </div>
 
           <button
             onClick={() => {
@@ -184,10 +187,10 @@ export default function Navbar({
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile & Tablet Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="sm:hidden px-4 pt-3 pb-6 bg-gray-950/98 border-b border-white/10 backdrop-blur-2xl animate-fade-in space-y-3">
-          <div className="grid grid-cols-2 gap-2 pt-2">
+        <div className="lg:hidden px-4 pt-3 pb-6 bg-gray-950/98 border-b border-white/10 backdrop-blur-2xl animate-fade-in space-y-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -203,7 +206,8 @@ export default function Navbar({
             ))}
           </div>
 
-          <div className="pt-2 flex flex-col gap-2 border-t border-white/10">
+          {/* Quick Action Buttons on Mobile (<640px) */}
+          <div className="pt-2 flex flex-col sm:hidden gap-2 border-t border-white/10">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

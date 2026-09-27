@@ -24,11 +24,11 @@ export default function Experience({ onOpenResume }) {
   };
 
   return (
-    <section id="experience" className="py-24 relative overflow-hidden">
+    <section id="experience" className="py-16 sm:py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center space-y-3 mb-14">
+        <div className="flex flex-col items-center text-center space-y-3 mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-xs font-mono">
             <Briefcase className="w-3.5 h-3.5" />
             <span>CAREER PATH & TRACK RECORD</span>
@@ -44,15 +44,15 @@ export default function Experience({ onOpenResume }) {
           </p>
         </div>
 
-        {/* Tab Switcher: Work Experience vs Education */}
-        <div className="flex justify-center mb-12">
-          <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md">
+        {/* Tab Switcher: Work Experience vs Education (Scrollable on mobile) */}
+        <div className="flex justify-center mb-8 sm:mb-12">
+          <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-white/10 max-w-full overflow-x-auto no-scrollbar backdrop-blur-md">
             <button
               onClick={() => {
                 playClickSound();
                 setActiveTab("experience");
               }}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+              className={`flex items-center gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-semibold transition-all shrink-0 whitespace-nowrap cursor-pointer ${
                 activeTab === "experience"
                   ? "bg-violet-600 text-white shadow-[0_0_20px_rgba(139,92,246,0.4)]"
                   : "text-gray-400 hover:text-white"
@@ -66,7 +66,7 @@ export default function Experience({ onOpenResume }) {
                 playClickSound();
                 setActiveTab("education");
               }}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+              className={`flex items-center gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-semibold transition-all shrink-0 whitespace-nowrap cursor-pointer ${
                 activeTab === "education"
                   ? "bg-violet-600 text-white shadow-[0_0_20px_rgba(139,92,246,0.4)]"
                   : "text-gray-400 hover:text-white"
@@ -95,7 +95,7 @@ export default function Experience({ onOpenResume }) {
                   {/* Clickable Header Bar */}
                   <div
                     onClick={() => toggleExpand(index)}
-                    className="p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer select-none"
+                    className="p-5 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer select-none"
                   >
                     <div className="flex items-start gap-4">
                       <div className="p-3 rounded-2xl bg-violet-600/10 text-violet-400 border border-violet-500/20 shrink-0 mt-0.5">
@@ -133,7 +133,7 @@ export default function Experience({ onOpenResume }) {
 
                   {/* Expanded Body Drawer */}
                   {isExpanded && (
-                    <div className="px-6 pb-6 sm:px-7 sm:pb-7 border-t border-white/5 pt-4 space-y-4 animate-fade-in">
+                    <div className="px-5 pb-5 sm:px-7 sm:pb-7 border-t border-white/5 pt-4 space-y-4 animate-fade-in">
                       <p className="text-sm text-gray-300 leading-relaxed">
                         {item.description}
                       </p>

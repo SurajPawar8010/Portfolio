@@ -197,11 +197,11 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);`;
   ];
 
   return (
-    <section id="creativelab" className="py-24 relative overflow-hidden">
+    <section id="creativelab" className="py-16 sm:py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center space-y-3 mb-14">
+        <div className="flex flex-col items-center text-center space-y-3 mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-mono">
             <FlaskConical className="w-3.5 h-3.5" />
             <span>INTERACTIVE PLAYGROUND</span>
@@ -217,15 +217,15 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);`;
           </p>
         </div>
 
-        {/* Experiment Tab Switcher */}
-        <div className="flex justify-center mb-10">
-          <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md">
+        {/* Experiment Tab Switcher (Scrollable on mobile) */}
+        <div className="flex justify-center mb-8 sm:mb-10">
+          <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-white/10 max-w-full overflow-x-auto no-scrollbar backdrop-blur-md">
             <button
               onClick={() => {
                 playClickSound();
                 setActiveTab("physics");
               }}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all shrink-0 whitespace-nowrap cursor-pointer ${
                 activeTab === "physics"
                   ? "bg-pink-600 text-white shadow-[0_0_20px_rgba(244,63,94,0.4)]"
                   : "text-gray-400 hover:text-white"
@@ -240,7 +240,7 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);`;
                 playClickSound();
                 setActiveTab("glass");
               }}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all shrink-0 whitespace-nowrap cursor-pointer ${
                 activeTab === "glass"
                   ? "bg-pink-600 text-white shadow-[0_0_20px_rgba(244,63,94,0.4)]"
                   : "text-gray-400 hover:text-white"
@@ -255,7 +255,7 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);`;
                 playClickSound();
                 setActiveTab("audio");
               }}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all shrink-0 whitespace-nowrap cursor-pointer ${
                 activeTab === "audio"
                   ? "bg-pink-600 text-white shadow-[0_0_20px_rgba(244,63,94,0.4)]"
                   : "text-gray-400 hover:text-white"
@@ -268,7 +268,7 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);`;
         </div>
 
         {/* Main Lab Showcase Container */}
-        <div className="max-w-4xl mx-auto rounded-3xl bg-gray-950/90 border border-white/10 overflow-hidden shadow-2xl p-6 sm:p-8 backdrop-blur-2xl">
+        <div className="max-w-4xl mx-auto rounded-3xl bg-gray-950/90 border border-white/10 overflow-hidden shadow-2xl p-4 sm:p-8 backdrop-blur-2xl">
           
           {/* TAB 1: Particle Gravity Field */}
           {activeTab === "physics" && (

@@ -210,7 +210,7 @@ export default function CommandPalette({
   return (
     <div 
       id="command-palette-overlay"
-      className="fixed inset-0 z-[9995] flex items-start justify-center pt-16 sm:pt-20 px-4 pb-8 bg-black/80 backdrop-blur-md animate-fade-in overflow-y-auto cursor-pointer"
+      className="fixed inset-0 z-[9995] flex items-start justify-center pt-12 sm:pt-20 px-3 sm:px-4 pb-6 sm:pb-8 bg-black/80 backdrop-blur-md animate-fade-in overflow-y-auto cursor-pointer"
       style={{ overscrollBehavior: "contain" }}
       onClick={onClose}
     >
@@ -294,8 +294,8 @@ export default function CommandPalette({
           )}
         </div>
 
-        {/* Footer info */}
-        <div className="px-4 py-2.5 border-t border-white/10 bg-white/[0.01] flex items-center justify-between text-[11px] text-gray-500">
+        {/* Footer info (Desktop keyboard navigation hint) */}
+        <div className="hidden sm:flex px-4 py-2.5 border-t border-white/10 bg-white/[0.01] items-center justify-between text-[11px] text-gray-500">
           <div className="flex items-center gap-2">
             <span>Navigation:</span>
             <kbd className="px-1.5 py-0.5 rounded bg-white/10 text-gray-300 font-mono">↑</kbd>

@@ -17,12 +17,12 @@ export default function TestimonialsAndServices() {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-16 sm:py-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ================= SERVICES SECTION ================= */}
         <div>
-          <div className="flex flex-col items-center text-center space-y-3 mb-14">
+          <div className="flex flex-col items-center text-center space-y-3 mb-10 sm:mb-14">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-mono">
               <Zap className="w-3.5 h-3.5" />
               <span>SERVICES & EXPERTISE</span>
@@ -44,7 +44,7 @@ export default function TestimonialsAndServices() {
               return (
                 <div
                   key={index}
-                  className="p-6 rounded-3xl bg-gray-950/80 border border-white/10 hover:border-violet-500/40 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-lg"
+                  className="p-5 sm:p-6 rounded-3xl bg-gray-950/80 border border-white/10 hover:border-violet-500/40 backdrop-blur-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-lg"
                 >
                   <div>
                     <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-violet-600/20 to-cyan-500/20 border border-white/10 flex items-center justify-center text-violet-400 group-hover:text-cyan-300 group-hover:scale-105 transition-all mb-5">

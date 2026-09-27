@@ -76,9 +76,9 @@ await engineer.buildScalableApplication();`;
   ];
 
   return (
-    <section id="home" className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen pt-24 sm:pt-32 pb-16 sm:pb-20 flex flex-col justify-center overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
           {/* Left Column: Headlines & Call to Actions */}
           <div className="lg:col-span-7 flex flex-col space-y-6">
@@ -98,7 +98,7 @@ await engineer.buildScalableApplication();`;
                 {personalData.greeting} <span className="text-white font-semibold">{personalData.name}</span>
               </p>
               
-              <h1 className="text-4xl sm:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.15] sm:leading-[1.1] break-words">
                 Sculpting <br className="hidden sm:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-300 to-cyan-300">
                   Digital Realities
@@ -121,14 +121,14 @@ await engineer.buildScalableApplication();`;
               {personalData.bio}
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            {/* CTAs - Full-width stacked on mobile, inline on tablet/desktop */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
               <button
                 onClick={() => {
                   playClickSound();
                   onNavigate ? onNavigate("projects") : null;
                 }}
-                className="group relative inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 text-white font-semibold text-sm shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:shadow-[0_0_40px_rgba(139,92,246,0.8)] transition-all transform hover:-translate-y-0.5"
+                className="group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-500 text-white font-semibold text-sm shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:shadow-[0_0_40px_rgba(139,92,246,0.8)] transition-all transform hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>Explore Masterpieces</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -139,7 +139,7 @@ await engineer.buildScalableApplication();`;
                   playClickSound();
                   onNavigate ? onNavigate("contact") : null;
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/10 text-white font-semibold text-sm border border-white/10 hover:border-violet-500/40 backdrop-blur-md transition-all transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/10 text-white font-semibold text-sm border border-white/10 hover:border-violet-500/40 backdrop-blur-md transition-all transform hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>Initiate Contact</span>
                 <Sparkles className="w-4 h-4 text-violet-400" />
@@ -152,7 +152,7 @@ await engineer.buildScalableApplication();`;
                   playClickSound();
                   showToast("Downloading Suraj Pawar's Resume PDF...");
                 }}
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/5 text-gray-300 font-medium text-sm border border-white/5 transition-all cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/5 text-gray-300 font-medium text-sm border border-white/5 transition-all cursor-pointer"
               >
                 <Download className="w-4 h-4 text-cyan-400" />
                 <span>Download CV</span>
@@ -160,7 +160,7 @@ await engineer.buildScalableApplication();`;
             </div>
 
             {/* Quick Stats Pill Strip */}
-            <div className="grid grid-cols-2 gap-6 pt-4 border-t border-white/10 max-w-xs">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-4 border-t border-white/10 w-full sm:max-w-xs">
               <div>
                 <p className="text-2xl font-extrabold text-white font-mono">{personalData.yearsExperience}</p>
                 <p className="text-xs text-gray-400">Years Experience</p>
@@ -257,7 +257,7 @@ await engineer.buildScalableApplication();`;
                   </div>
 
                   {/* Code Display */}
-                  <div className="p-3 text-[11px] overflow-x-auto text-gray-300 leading-relaxed max-h-36 overflow-y-auto">
+                  <div className="p-3 text-[11px] overflow-x-auto no-scrollbar text-gray-300 leading-relaxed max-h-36 overflow-y-auto">
                     <pre>
                       <code>
                         <span className="text-violet-400">const</span>{" "}

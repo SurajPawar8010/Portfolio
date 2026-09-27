@@ -49,7 +49,7 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
   return (
     <div 
       id="resume-modal-overlay"
-      className="fixed inset-0 z-[9996] flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fade-in"
+      className="fixed inset-0 z-[9996] flex items-center justify-center p-2 sm:p-6 bg-black/85 backdrop-blur-md animate-fade-in"
       style={{ overscrollBehavior: "contain" }}
       onClick={onClose}
     >
@@ -60,22 +60,22 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header bar - stays pinned at the top */}
-        <div className="flex items-center justify-between px-5 sm:px-7 py-3.5 border-b border-white/10 bg-white/[0.03] shrink-0 print:hidden">
-          <div className="flex items-center gap-2.5">
+        <div className="flex items-center justify-between px-3.5 sm:px-7 py-3 sm:py-3.5 border-b border-white/10 bg-white/[0.03] shrink-0 print:hidden">
+          <div className="flex items-center gap-2">
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]" />
-            <span className="px-2.5 py-0.5 rounded-md text-xs bg-violet-500/20 text-violet-300 border border-violet-500/30 font-mono font-medium">
+            <span className="px-2 py-0.5 rounded-md text-[11px] sm:text-xs bg-violet-500/20 text-violet-300 border border-violet-500/30 font-mono font-medium truncate max-w-[130px] sm:max-w-none">
               Software Engineer
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <button
               onClick={handlePrint}
               title="Print or Save as PDF"
-              className="px-3 py-1.5 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 border border-white/10 transition-all text-xs font-medium flex items-center gap-1.5 cursor-pointer"
+              className="p-2 sm:px-3 sm:py-1.5 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 border border-white/10 transition-all text-xs font-medium flex items-center gap-1.5 cursor-pointer"
             >
               <Printer className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Print / Save PDF</span>
+              <span className="hidden sm:inline">Print / Save PDF</span>
             </button>
             <a
               href="/Suraj_Pawar_Resume.pdf"
@@ -84,10 +84,11 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
                 playClickSound();
                 showToast("Downloading Suraj Pawar's Resume PDF...");
               }}
-              className="px-3.5 py-1.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium text-xs flex items-center gap-1.5 transition-all shadow-[0_0_15px_rgba(139,92,246,0.4)] cursor-pointer"
+              title="Download PDF"
+              className="p-2 sm:px-3.5 sm:py-1.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium text-xs flex items-center gap-1.5 transition-all shadow-[0_0_15px_rgba(139,92,246,0.4)] cursor-pointer"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Download PDF</span>
+              <span className="hidden sm:inline">Download PDF</span>
             </a>
             <button
               onClick={() => {
@@ -95,7 +96,7 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
                 onClose();
               }}
               title="Close (Esc)"
-              className="p-1.5 rounded-xl text-gray-400 hover:text-white hover:bg-white/10 transition-colors ml-1 cursor-pointer"
+              className="p-1.5 rounded-xl text-gray-400 hover:text-white hover:bg-white/10 transition-colors ml-0.5 sm:ml-1 cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -104,7 +105,7 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
 
         {/* Resume Content Body - perfectly scrollable without clipping */}
         <div 
-          className="flex-1 overflow-y-auto p-6 sm:p-10 space-y-8 print:p-0 print:text-black"
+          className="flex-1 overflow-y-auto p-4 sm:p-8 md:p-10 space-y-8 print:p-0 print:text-black"
           style={{ overflowY: "auto", overscrollBehavior: "contain" }}
         >
           {/* Top Profile Header */}

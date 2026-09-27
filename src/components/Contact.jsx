@@ -105,11 +105,11 @@ export default function Contact({ showToast }) {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center space-y-3 mb-16">
+        <div className="flex flex-col items-center text-center space-y-3 mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
             <Mail className="w-3.5 h-3.5" />
             <span>LET'S CONNECT & COLLABORATE</span>
@@ -282,7 +282,7 @@ export default function Contact({ showToast }) {
 
           {/* Right Column: Interactive Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-gray-950/90 border border-white/10 backdrop-blur-2xl shadow-2xl relative">
+            <div className="p-5 sm:p-8 md:p-10 rounded-3xl bg-gray-950/90 border border-white/10 backdrop-blur-2xl shadow-2xl relative">
               
               {submitted ? (
                 <div className="py-12 flex flex-col items-center text-center space-y-4 animate-fade-in">

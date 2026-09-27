@@ -42,11 +42,11 @@ export default function About({ onOpenResume }) {
   ];
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-16 sm:py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center space-y-3 mb-16">
+        <div className="flex flex-col items-center text-center space-y-3 mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-300 text-xs font-mono">
             <User className="w-3.5 h-3.5" />
             <span>ABOUT & BACKGROUND</span>
@@ -68,8 +68,8 @@ export default function About({ onOpenResume }) {
           {/* Left Side: Interactive Value Pillar Tabs */}
           <div className="lg:col-span-7 space-y-6">
             
-            {/* Tab Buttons */}
-            <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-white/10 w-fit backdrop-blur-md">
+            {/* Tab Buttons - Mobile horizontally scrollable with no-scrollbar */}
+            <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-white/10 w-full sm:w-fit overflow-x-auto no-scrollbar backdrop-blur-md">
               {pillars.map((pillar) => {
                 const Icon = pillar.icon;
                 const isSelected = activeTab === pillar.id;
@@ -80,7 +80,7 @@ export default function About({ onOpenResume }) {
                       playClickSound();
                       setActiveTab(pillar.id);
                     }}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium transition-all ${
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium transition-all shrink-0 whitespace-nowrap cursor-pointer ${
                       isSelected
                         ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-[0_0_15px_rgba(139,92,246,0.4)]"
                         : "text-gray-400 hover:text-white hover:bg-white/5"
@@ -94,7 +94,7 @@ export default function About({ onOpenResume }) {
             </div>
 
             {/* Active Pillar Card */}
-            <div className="p-6 sm:p-8 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+            <div className="p-5 sm:p-8 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-violet-600/10 rounded-full blur-[90px] pointer-events-none" />
 
               {pillars.map((pillar) => {
