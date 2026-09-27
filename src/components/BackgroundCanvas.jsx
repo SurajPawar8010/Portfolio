@@ -131,8 +131,13 @@ export default function BackgroundCanvas() {
 
     render();
 
-    // Event listeners
+    // Event listeners (Desktop only)
     const handleMouseMove = (e) => {
+      if (window.innerWidth < 1024 || window.matchMedia("(pointer: coarse)").matches) {
+        mouse.x = null;
+        mouse.y = null;
+        return;
+      }
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     };
@@ -142,19 +147,32 @@ export default function BackgroundCanvas() {
       mouse.y = null;
     };
 
+    const handleTouch = () => {
+      mouse.x = null;
+      mouse.y = null;
+    };
+
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
+      if (window.innerWidth < 1024) {
+        mouse.x = null;
+        mouse.y = null;
+      }
     };
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
     window.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("touchstart", handleTouch, { passive: true });
+    window.addEventListener("touchend", handleTouch, { passive: true });
     window.addEventListener("resize", handleResize);
 
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("touchstart", handleTouch);
+      window.removeEventListener("touchend", handleTouch);
       window.removeEventListener("resize", handleResize);
     };
   }, []);

@@ -1,14 +1,25 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function CustomCursor() {
+  const [isEnabled, setIsEnabled] = useState(false);
   const dotRef = useRef(null);
   const ringRef = useRef(null);
 
   useEffect(() => {
-    // Disable on touch devices
-    if (window.matchMedia("(pointer: coarse)").matches) {
-      return;
-    }
+    const checkEligibility = () => {
+      // Custom cursor is strictly for desktop devices with fine pointer controls
+      const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+      const isDesktopWidth = window.innerWidth >= 1024;
+      setIsEnabled(hasFinePointer && isDesktopWidth);
+    };
+
+    checkEligibility();
+    window.addEventListener("resize", checkEligibility);
+    return () => window.removeEventListener("resize", checkEligibility);
+  }, []);
+
+  useEffect(() => {
+    if (!isEnabled) return;
 
     const dot = dotRef.current;
     const ring = ringRef.current;
@@ -70,7 +81,7 @@ export default function CustomCursor() {
     document.addEventListener("mouseleave", onMouseLeave);
     document.addEventListener("mouseenter", onMouseEnter);
 
-    // Event delegation for hoverable items - lightweight & catches dynamically added elements
+    // Event delegation for hoverable items
     const handleMouseOver = (e) => {
       const target = e.target;
       const interactive = target.closest("a, button, input, textarea, select, [role='button'], .interactive-hover");
@@ -85,10 +96,9 @@ export default function CustomCursor() {
 
     document.addEventListener("mouseover", handleMouseOver, { passive: true });
 
-    // Smooth 60-120fps hardware-accelerated lerp loop for the trailing ring
+    // Smooth hardware-accelerated lerp loop for the trailing ring
     const render = () => {
       if (isVisible) {
-        // High-precision smooth lerp
         const lerpFactor = isHovered ? 0.22 : 0.18;
         ringX += (mouseX - ringX) * lerpFactor;
         ringY += (mouseY - ringY) * lerpFactor;
@@ -111,14 +121,18 @@ export default function CustomCursor() {
       document.removeEventListener("mouseenter", onMouseEnter);
       document.removeEventListener("mouseover", handleMouseOver);
     };
-  }, []);
+  }, [isEnabled]);
+
+  // Completely omit from DOM on mobile or touchscreens
+  if (!isEnabled) return null;
 
   return (
-    <>
+    <div id="custom-cursor-root" className="hidden lg:block pointer-events-none">
       {/* Precision Core Dot */}
       <div
+        id="custom-cursor-dot"
         ref={dotRef}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] opacity-0"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] opacity-0 custom-cursor-dot"
         style={{
           backgroundColor: "#38bdf8",
           boxShadow: "0 0 10px #38bdf8",
@@ -129,8 +143,9 @@ export default function CustomCursor() {
 
       {/* Trailing Aura Ring */}
       <div
+        id="custom-cursor-ring"
         ref={ringRef}
-        className="fixed top-0 left-0 rounded-full pointer-events-none z-[9998] opacity-0 border border-cyan-400/40 bg-cyan-400/5 shadow-[0_0_15px_rgba(56,189,248,0.2)]"
+        className="fixed top-0 left-0 rounded-full pointer-events-none z-[9998] opacity-0 border border-cyan-400/40 bg-cyan-400/5 shadow-[0_0_15px_rgba(56,189,248,0.2)] custom-cursor-ring"
         style={{
           width: "36px",
           height: "36px",
@@ -138,6 +153,6 @@ export default function CustomCursor() {
           transition: "opacity 0.2s ease, width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background-color 0.25s ease"
         }}
       />
-    </>
+    </div>
   );
 }
