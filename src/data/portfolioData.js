@@ -48,7 +48,7 @@ export const personalData = {
   },
 
   socials: {
-    github: "https://github.com/surajbalupawar1-hash",
+    github: "https://github.com/SurajPawar8010",
     linkedin: "https://www.linkedin.com/in/suraj-pawar-2a258633b/",
     whatsapp: "https://wa.me/918010613284?text=Hi%20Suraj,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!",
     phone: "tel:+918010613284",
