@@ -2,13 +2,11 @@ import React, { useState, useEffect } from "react";
 import { 
   Mail, 
   Send, 
-  MapPin, 
   Clock, 
   Sparkles, 
   Copy, 
   Check, 
   ExternalLink, 
-  MessageSquare,
   Phone
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon, TwitterIcon, WhatsappIcon } from "./SocialIcons";
@@ -20,10 +18,12 @@ export default function Contact({ showToast }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    projectType: "Full-Stack Web App",
-    budget: "$10k - $25k",
+    projectType: "Full-Time Backend Engineer (Java & Spring Boot)",
+    budget: "₹8 LPA – ₹12 LPA",
     message: ""
   });
+  const [customScope, setCustomScope] = useState("");
+  const [customBudget, setCustomBudget] = useState("");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -68,6 +68,16 @@ export default function Contact({ showToast }) {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       showToast("Please fill in all required fields.", "error");
+      return;
+    }
+
+    if (formData.projectType === "Custom Scope" && !customScope.trim()) {
+      showToast("Please enter your custom project scope.", "error");
+      return;
+    }
+
+    if (formData.budget === "Custom Budget" && !customBudget.trim()) {
+      showToast("Please enter your custom budget / LPA amount.", "error");
       return;
     }
 
@@ -300,10 +310,12 @@ export default function Contact({ showToast }) {
                       setFormData({
                         name: "",
                         email: "",
-                        projectType: "Full-Stack Web App",
-                        budget: "$10k - $25k",
+                        projectType: "Full-Time Backend Engineer (Java & Spring Boot)",
+                        budget: "₹8 LPA – ₹12 LPA",
                         message: ""
                       });
+                      setCustomScope("");
+                      setCustomBudget("");
                     }}
                     className="px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-all mt-4"
                   >
@@ -322,7 +334,7 @@ export default function Contact({ showToast }) {
                       <input
                         type="text"
                         required
-                        placeholder="e.g. Sarah Connor"
+                        placeholder="e.g. Rahul Sharma / Tech Lead"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-violet-500 focus:outline-none text-white text-sm placeholder-gray-500 transition-colors"
@@ -336,7 +348,7 @@ export default function Contact({ showToast }) {
                       <input
                         type="email"
                         required
-                        placeholder="sarah@company.com"
+                        placeholder="hiring@company.com / your.email@domain.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-violet-500 focus:outline-none text-white text-sm placeholder-gray-500 transition-colors"
@@ -347,35 +359,72 @@ export default function Contact({ showToast }) {
                   {/* Project Type & Budget */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label className="text-xs font-semibold text-gray-300 uppercase tracking-wider">
-                        Project Scope
-                      </label>
+                      <div className="flex items-center justify-between">
+                        <label className="text-xs font-semibold text-gray-300 uppercase tracking-wider">
+                          Project Scope / Role
+                        </label>
+                        {formData.projectType === "Custom Scope" && (
+                          <span className="text-[10px] text-cyan-400 font-mono">Custom Input Active</span>
+                        )}
+                      </div>
                       <select
                         value={formData.projectType}
                         onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 focus:border-violet-500 focus:outline-none text-white text-sm transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 focus:border-violet-500 focus:outline-none text-white text-sm transition-colors cursor-pointer"
                       >
-                        <option value="Full-Stack Web App">Full-Stack Web Application</option>
-                        <option value="Generative AI & Agent Workflows">Generative AI & Agent Workflows</option>
-                        <option value="Creative WebGL / 3D Experience">Creative WebGL / 3D Experience</option>
-                        <option value="Architecture Advisory & Audit">Architecture Advisory & Audit</option>
+                        <option value="Full-Time Backend Engineer (Java & Spring Boot)">Full-Time Backend Engineer (Java & Spring Boot)</option>
+                        <option value="Java 17 & Spring Boot 3 Microservices">Java 17 & Spring Boot 3 Microservices</option>
+                        <option value="Apache Kafka Event Streaming & Pipelines">Apache Kafka Event Streaming & Pipelines</option>
+                        <option value="FFmpeg HLS Video Transcoding Pipeline">FFmpeg HLS Video Transcoding Pipeline</option>
+                        <option value="PostgreSQL 17 Database & API Engineering">PostgreSQL 17 Database & API Engineering</option>
+                        <option value="Full-Stack Web App (React.js + Spring Boot)">Full-Stack Web App (React.js + Spring Boot)</option>
+                        <option value="Custom Scope">Custom Scope / Other (Type your own)</option>
                       </select>
+
+                      {formData.projectType === "Custom Scope" && (
+                        <input
+                          type="text"
+                          required
+                          placeholder="Type your custom project scope or role title..."
+                          value={customScope}
+                          onChange={(e) => setCustomScope(e.target.value)}
+                          className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-cyan-500/40 focus:border-cyan-400 focus:outline-none text-white text-xs placeholder-gray-500 transition-colors animate-fade-in"
+                        />
+                      )}
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-xs font-semibold text-gray-300 uppercase tracking-wider">
-                        Anticipated Budget
-                      </label>
+                      <div className="flex items-center justify-between">
+                        <label className="text-xs font-semibold text-gray-300 uppercase tracking-wider">
+                          Anticipated Budget / Compensation
+                        </label>
+                        {formData.budget === "Custom Budget" && (
+                          <span className="text-[10px] text-cyan-400 font-mono">Custom Input Active</span>
+                        )}
+                      </div>
                       <select
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 focus:border-violet-500 focus:outline-none text-white text-sm transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-gray-900 border border-white/10 focus:border-violet-500 focus:outline-none text-white text-sm transition-colors cursor-pointer"
                       >
-                        <option value="$5k - $10k">$5k – $10k</option>
-                        <option value="$10k - $25k">$10k – $25k</option>
-                        <option value="$25k - $50k">$25k – $50k</option>
-                        <option value="$50k+">$50k+ (Enterprise Scope)</option>
+                        <option value="₹6 LPA – ₹10 LPA">₹6 LPA – ₹10 LPA</option>
+                        <option value="₹10 LPA – ₹15 LPA">₹10 LPA – ₹15 LPA</option>
+                        <option value="₹15 LPA – ₹20 LPA">₹15 LPA – ₹20 LPA</option>
+                        <option value="₹20+ LPA">₹20+ LPA (Senior Role)</option>
+                        <option value="Competitive / Open to Discussion">Competitive / Open to Discussion</option>
+                        <option value="Custom Budget">Custom Budget / LPA (Type your own)</option>
                       </select>
+
+                      {formData.budget === "Custom Budget" && (
+                        <input
+                          type="text"
+                          required
+                          placeholder="e.g. ₹12-14 LPA or ₹50,000 Project Budget"
+                          value={customBudget}
+                          onChange={(e) => setCustomBudget(e.target.value)}
+                          className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-cyan-500/40 focus:border-cyan-400 focus:outline-none text-white text-xs placeholder-gray-500 transition-colors animate-fade-in"
+                        />
+                      )}
                     </div>
                   </div>
 
@@ -387,7 +436,7 @@ export default function Contact({ showToast }) {
                     <textarea
                       required
                       rows={4}
-                      placeholder="Tell me about your goals, timeline, and what you're looking to build..."
+                      placeholder="Tell me about the engineering requirements, role details, timeline, or architecture goals..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-violet-500 focus:outline-none text-white text-sm placeholder-gray-500 transition-colors resize-none"
