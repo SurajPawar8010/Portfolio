@@ -125,7 +125,7 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
               <img 
                 src={personalData.avatar} 
                 alt={personalData.name} 
-                className="w-20 h-20 rounded-2xl object-cover border-2 border-violet-500/40 shadow-lg"
+                className="w-20 h-20 rounded-2xl object-cover object-[center_20%] border-2 border-violet-500/40 shadow-lg"
               />
             </div>
           </div>

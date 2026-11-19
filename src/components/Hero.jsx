@@ -188,7 +188,7 @@ await engineer.buildScalableMicroservices();`;
                   <img
                     src={personalData.avatar}
                     alt={personalData.name}
-                    className="w-full h-full object-cover object-[center_15%] transform transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover object-[center_20%] transform transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent" />
 

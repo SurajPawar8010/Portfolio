@@ -25,7 +25,7 @@ export const personalData = {
   email: "surajbalupawar1@gmail.com",
   phone: "+91-8010613284",
   phoneRaw: "8010613284",
-  avatar: "/avatar.jpg?v=3",
+  avatar: "/avatar.jpg?v=4",
   yearsExperience: "1 Year",
   projectsCompleted: "15+",
   satisfiedClients: "100%",
