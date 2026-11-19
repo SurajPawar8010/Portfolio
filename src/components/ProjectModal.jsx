@@ -57,18 +57,16 @@ export default function ProjectModal({ project, onClose }) {
     <div 
       id="project-modal-overlay"
       className="fixed inset-0 z-[9996] overflow-y-auto bg-black/85 backdrop-blur-xl p-2 sm:p-4 md:p-6"
-      style={{ overscrollBehavior: "contain" }}
       onClick={onClose}
     >
       <div className="min-h-full flex items-start sm:items-center justify-center py-2 sm:py-6">
         <div 
           id="project-modal-card"
-          className="w-full max-w-4xl bg-gray-950 border border-white/10 rounded-2xl sm:rounded-3xl shadow-[0_30px_90px_rgba(0,0,0,0.95)] overflow-hidden text-gray-200 relative my-auto cursor-default"
-          style={{ overscrollBehavior: "contain" }}
+          className="w-full max-w-4xl bg-gray-950 border border-white/10 rounded-2xl sm:rounded-3xl shadow-[0_30px_90px_rgba(0,0,0,0.95)] text-gray-200 relative my-auto cursor-default"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Sticky Modal Top Header */}
-          <div className="sticky top-0 z-30 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-3.5 border-b border-white/10 bg-gray-950/95 backdrop-blur-md">
+          <div className="sticky top-0 z-30 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-3.5 border-b border-white/10 bg-gray-950/95 backdrop-blur-md rounded-t-2xl sm:rounded-t-3xl">
             <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
               <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider bg-violet-500/20 text-violet-300 border border-violet-500/30 shrink-0">
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
@@ -264,7 +262,7 @@ export default function ProjectModal({ project, onClose }) {
           </div>
 
           {/* Sticky Modal Bottom Action Footer */}
-          <div className="sticky bottom-0 z-30 px-4 sm:px-6 py-3.5 border-t border-white/10 bg-gray-950/95 backdrop-blur-md flex items-center justify-between gap-3">
+          <div className="sticky bottom-0 z-30 px-4 sm:px-6 py-3.5 border-t border-white/10 bg-gray-950/95 backdrop-blur-md flex items-center justify-between gap-3 rounded-b-2xl sm:rounded-b-3xl">
             <div className="flex items-center gap-2 text-xs font-mono text-gray-400">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
               <span className="hidden sm:inline">Engineered by Suraj Balu Pawar • Production Verified</span>
