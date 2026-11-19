@@ -15,28 +15,28 @@ import { personalData } from "../data/portfolioData";
 import { playClickSound } from "../utils/soundEffects";
 
 export default function About({ onOpenResume }) {
-  const [activeTab, setActiveTab] = useState("philosophy");
+  const [activeTab, setActiveTab] = useState("microservices");
 
   const pillars = [
     {
-      id: "philosophy",
-      label: "Philosophy",
-      icon: Sparkles,
-      title: "Perfection at the Intersection of Art & Code",
+      id: "microservices",
+      label: "Microservices",
+      icon: Cpu,
+      title: "15+ Distributed Spring Boot 3 Microservices",
       content: personalData.about.paragraphs[0]
     },
     {
-      id: "architecture",
-      label: "Architecture",
-      icon: Cpu,
-      title: "Resilient Distributed Systems Built for Scale",
+      id: "events",
+      label: "Kafka & Media",
+      icon: Zap,
+      title: "Event-Driven Queues & FFmpeg Video Transcoding",
       content: personalData.about.paragraphs[1]
     },
     {
-      id: "passions",
-      label: "Beyond Code",
-      icon: HeartHandshake,
-      title: "Mentorship, Audio Synthesis & Open-Source",
+      id: "academics",
+      label: "Academics",
+      icon: Sparkles,
+      title: "Solid Foundations in Computer Science (M.Sc. & B.C.S.)",
       content: personalData.about.paragraphs[2]
     }
   ];
@@ -142,54 +142,54 @@ export default function About({ onOpenResume }) {
             </div>
           </div>
 
-          {/* Right Side: Philosophy Bento Cards */}
+          {/* Right Side: Engineering Bento Cards */}
           <div className="lg:col-span-5 grid grid-cols-1 gap-4">
             
-            {/* Card 1: Performance Obsession */}
+            {/* Card 1: Sub-10ms PostgreSQL Latency */}
             <div className="p-6 rounded-3xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-cyan-500/30 transition-all">
               <div className="flex items-center justify-between mb-3">
                 <div className="p-2.5 rounded-2xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
                   <Zap className="w-5 h-5" />
                 </div>
                 <span className="text-[11px] font-mono text-cyan-400 px-2 py-0.5 rounded-full bg-cyan-500/10">
-                  &lt; 16ms Frames
+                  &lt; 10ms Response
                 </span>
               </div>
-              <h3 className="text-base font-bold text-white mb-1">Sub-Frame Rendering</h3>
+              <h3 className="text-base font-bold text-white mb-1">PostgreSQL 17 & Redis Optimization</h3>
               <p className="text-xs text-gray-400 leading-relaxed">
-                Zero jank, hardware-accelerated animations, and aggressive memoization ensure smooth 60fps across every device.
+                Tuned relational schema indexes and distributed in-memory cache eviction to achieve sub-10ms query speeds across high-traffic microservices.
               </p>
             </div>
 
-            {/* Card 2: Distributed Cloud Scale */}
+            {/* Card 2: Distributed Kafka Pipelines */}
             <div className="p-6 rounded-3xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-violet-500/30 transition-all">
               <div className="flex items-center justify-between mb-3">
                 <div className="p-2.5 rounded-2xl bg-violet-500/10 text-violet-400 border border-violet-500/20">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <span className="text-[11px] font-mono text-violet-400 px-2 py-0.5 rounded-full bg-violet-500/10">
-                  99.99% Uptime
+                  5k+ Daily Events
                 </span>
               </div>
-              <h3 className="text-base font-bold text-white mb-1">Fault-Tolerant Distributed APIs</h3>
+              <h3 className="text-base font-bold text-white mb-1">Event-Driven Kafka Messaging</h3>
               <p className="text-xs text-gray-400 leading-relaxed">
-                Decoupled microservices, resilient queue brokers, and automated failovers built to absorb traffic spikes without breaking a sweat.
+                Decoupled asynchronous event pipelines with Apache Kafka, processing 5,000+ daily notification events with sub-50ms latency.
               </p>
             </div>
 
-            {/* Card 3: Generative AI Orchestration */}
+            {/* Card 3: FFmpeg Automated Media Pipeline */}
             <div className="p-6 rounded-3xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 backdrop-blur-xl relative overflow-hidden group hover:border-emerald-500/30 transition-all">
               <div className="flex items-center justify-between mb-3">
                 <div className="p-2.5 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                   <Cpu className="w-5 h-5" />
                 </div>
                 <span className="text-[11px] font-mono text-emerald-400 px-2 py-0.5 rounded-full bg-emerald-500/10">
-                  Streaming LLMs
+                  Up to 10 GB Files
                 </span>
               </div>
-              <h3 className="text-base font-bold text-white mb-1">Next-Gen AI Systems</h3>
+              <h3 className="text-base font-bold text-white mb-1">FFmpeg Video Slicing & HLS</h3>
               <p className="text-xs text-gray-400 leading-relaxed">
-                Embedding autonomous agent loops, vector memory pipelines, and streaming token graphs into real-world commercial workflows.
+                Background media transcoding pipeline slicing large lecture videos into 2-second .ts segments with master playlists for instant &lt;1s playback start.
               </p>
             </div>
 

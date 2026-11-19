@@ -1,55 +1,58 @@
 /**
  * ====================================================================
- * PORTFOLIO DATA CONFIGURATION — SURAJ PAWAR
+ * PORTFOLIO DATA CONFIGURATION — SURAJ BALU PAWAR
  * ====================================================================
- * Synchronized with official LinkedIn Profile & Credentials:
- * Software Engineer | Java | JDBC | Hibernate | Spring | Spring Boot |
- * JavaScript | React.JS | HTML5 | CSS | MySQL
+ * Synchronized with Official Resume:
+ * Backend-focused Software Engineer | Java 17 | Spring Boot 3 | PostgreSQL 17 |
+ * Apache Kafka | Redis | FFmpeg (HLS) | Spring Cloud | WebSockets | React.js
  */
 
 export const personalData = {
-  name: "Suraj Pawar",
+  name: "Suraj Balu Pawar",
+  displayName: "Suraj Pawar",
   greeting: "Hello, I am",
-  tagline: "Software Engineer | Java • Spring Boot • Microservices • React.js",
+  tagline: "Backend-Focused Software Engineer | Java 17 • Spring Boot 3 • Kafka • PostgreSQL",
   roles: [
-    "Software Engineer",
-    "Java & Spring Boot Specialist",
-    "Microservices & Kafka Architect",
-    "Full-Stack React.js Developer"
+    "Backend Software Engineer",
+    "Java 17 & Spring Boot 3 Specialist",
+    "Event-Driven Microservices (Kafka & Redis)",
+    "Automated Media & HLS Streaming (FFmpeg)",
+    "Full-Stack Web Developer (React.js)"
   ],
   badge: "Available for Software Engineering Roles & Opportunities",
-  location: "Pune District, Maharashtra, India",
+  location: "Pune, Maharashtra, India",
   timezone: "IST (UTC+05:30)",
   email: "surajbalupawar1@gmail.com",
-  phone: "+91 8010613284",
+  phone: "+91-8010613284",
   phoneRaw: "8010613284",
   avatar: "/avatar.jpg?v=3",
-  yearsExperience: "1+ Years",
+  yearsExperience: "1 Year",
   projectsCompleted: "15+",
   satisfiedClients: "100%",
-  usersImpacted: "50k+",
+  usersImpacted: "1,000+",
   codeCommits: "1,200+",
 
-  bio: "Software Engineer at Nebula Technology, engineering scalable microservices with Core Java, Spring Boot, Apache Kafka, Redis, and modern responsive web applications with React.js.",
+  bio: "Backend-focused Software Engineer with 1 year of hands-on experience developing and scaling microservices using Java 17, Spring Boot 3, and PostgreSQL. Proficient in event-driven messaging with Apache Kafka, distributed Redis caching, and automated media processing with FFmpeg. Demonstrated success optimizing high-traffic RESTful APIs, securing distributed endpoints, and engineering bulk data ingestion pipelines.",
   
   about: {
-    heading: "Software Engineer at Nebula Technology, delivering robust Java backends, Kafka pipelines, and dynamic React.js frontends.",
+    heading: "Backend-focused Software Engineer at Nebula Technology, scaling 15+ microservices with Java 17, Spring Boot 3, PostgreSQL, Apache Kafka, and FFmpeg.",
     paragraphs: [
-      "I am a Software Engineer at Nebula Technology in Pune, Maharashtra. I completed my Bachelor of Science in Entire Computer Science (B.Sc ECS) from Karmaveer Bhaurao Patil Mahavidyalaya, Pandharpur in March 2025.",
-      "Following my degree, I completed an intensive 6-month Full Stack Developer Internship at Nebula Technology from May 2025 to November 2025, after which I transitioned into my current role as a full-time Software Engineer starting in December 2025.",
-      "Currently, I am architecting and developing a large-scale Learning Management System (LMS) using Spring Boot microservices, Apache Kafka for event-driven streaming, Redis for distributed caching, and Docker for containerized deployment, paired with a modern React.js client interface."
+      "I am a Backend-focused Software Engineer with 1 year of hands-on experience developing and scaling distributed microservices using Java 17, Spring Boot 3, and PostgreSQL 17 at Nebula Technology in Pune, Maharashtra.",
+      "At Nebula Technology, I engineered and maintained 15+ RESTful microservices for an Enterprise E-Learning Platform supporting 1,000+ active users. My responsibilities span asynchronous event pipelines using Apache Kafka and Redis (5,000+ daily events with sub-50ms latency), background video transcoding with FFmpeg scaling uploads to 10 GB with <1s HLS playback, and enforcing JWT-based Role-Based Access Control (RBAC) to eliminate critical IDOR vulnerabilities across 100% of student cart and payment endpoints.",
+      "Academically, I hold a Bachelor of Computer Science (B.C.S.) with 68% (Graduated 2025) and am currently pursuing my Master of Science (M.Sc.) in Computer Science from Karmaveer Bhaurao Patil (KBP) College, Pandharpur."
     ],
     highlights: [
       { label: "Current Role", desc: "Software Engineer at Nebula Technology, Pune" },
-      { label: "Active Project", desc: "Enterprise Learning Management System (LMS)" },
-      { label: "Core Stack", desc: "Java, Spring Boot, Microservices, Kafka, Redis, Docker" },
-      { label: "Frontend & DB", desc: "React.js, Modern CSS, MySQL Relational Database" }
+      { label: "Flagship Platform", desc: "Enterprise Learning Management System (LMS) — 15+ Microservices" },
+      { label: "Core Stack", desc: "Java 17, Spring Boot 3, Spring Cloud, PostgreSQL 17, Redis" },
+      { label: "Events & Media", desc: "Apache Kafka, WebSockets, FFmpeg (HLS Video Slicing)" }
     ]
   },
 
   socials: {
     github: "https://github.com/SurajPawar8010",
     linkedin: "https://www.linkedin.com/in/suraj-pawar-2a258633b/",
+    portfolio: "https://suraj-pawar.vercel.app",
     whatsapp: "https://wa.me/918010613284?text=Hi%20Suraj,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!",
     phone: "tel:+918010613284",
     email: "mailto:surajbalupawar1@gmail.com",
@@ -60,8 +63,26 @@ export const personalData = {
 
   resume: {
     downloadUrl: "/Suraj_Pawar_Resume.pdf",
-    skillsSummary: "Core Java, Spring Boot, Microservices Architecture, Apache Kafka, Redis, Docker, Hibernate, JDBC, MySQL, React.js, JavaScript, REST APIs, Git",
-    education: "B.Sc (Entire Computer Science) — Karmaveer Bhaurao Patil Mahavidyalaya, Pandharpur, Dist-Solapur (June 2022 — March 2025)",
+    summary: "Backend-focused Software Engineer with 1 year of hands-on experience developing and scaling microservices using Java 17, Spring Boot 3, and PostgreSQL. Proficient in event-driven messaging with Apache Kafka, distributed Redis caching, and automated media processing with FFmpeg. Demonstrated success optimizing high-traffic RESTful APIs, securing distributed endpoints, and engineering bulk data ingestion pipelines.",
+    skillsSummary: "Java 17, Core Java, Spring Boot 3, Spring Cloud (Gateway, Eureka), PostgreSQL 17, Redis, Apache Kafka, WebSockets, FFmpeg (HLS Slicing), React.js, Docker, Swagger / OpenAPI 3.0",
+    education: "Master of Science (M.Sc.) & Bachelor of Computer Science (B.C.S.) — KBP College, Pandharpur",
+    educationList: [
+      {
+        degree: "Master of Science (M.Sc.) in Computer Science",
+        institution: "KBP College, Pandharpur",
+        status: "Pursuing",
+        period: "2025 — Present",
+        description: "Advanced study in distributed systems architecture, advanced database design, and software engineering methodologies."
+      },
+      {
+        degree: "Bachelor of Computer Science (B.C.S.)",
+        institution: "KBP College, Pandharpur",
+        status: "Graduated 2025",
+        score: "68%",
+        period: "June 2022 — May 2025",
+        description: "Rigorous computer science curriculum emphasizing Object-Oriented Programming with Java, Relational Databases, Data Structures & Algorithms, and Web Technologies."
+      }
+    ],
     certifications: [
       {
         id: "commbank-se",
@@ -94,41 +115,59 @@ export const personalData = {
 export const skillsCategories = [
   {
     id: "backend",
-    title: "Java & Microservices Architecture",
-    description: "Architecting high-throughput distributed backends, event streams, and enterprise APIs.",
+    title: "Languages & Backend",
+    description: "Core Java, distributed Spring Boot microservices, ORM mapping, and enterprise RESTful web services.",
     skills: [
-      { name: "Core Java (OOP, Collections, Streams)", level: 95, icon: "Cpu", tag: "Expert" },
-      { name: "Spring Boot & Microservices", level: 92, icon: "Server", tag: "Expert" },
-      { name: "Apache Kafka (Event-Driven Streaming)", level: 88, icon: "Network", tag: "Advanced" },
-      { name: "Hibernate ORM & JPA", level: 88, icon: "Layers", tag: "Advanced" },
-      { name: "JDBC (Database Connectivity)", level: 92, icon: "Database", tag: "Expert" },
-      { name: "RESTful Web Services & APIs", level: 94, icon: "Network", tag: "Expert" }
+      { name: "Java 17 & Core Java (OOPs, Collections, Streams)", level: 96, icon: "Cpu", tag: "Expert" },
+      { name: "Spring Boot 3 & Microservices Architecture", level: 94, icon: "Server", tag: "Expert" },
+      { name: "Spring Cloud (Gateway, Eureka)", level: 90, icon: "Cloud", tag: "Advanced" },
+      { name: "Spring Data JPA & Hibernate ORM", level: 92, icon: "Layers", tag: "Expert" },
+      { name: "RESTful APIs & Microservices Integration", level: 95, icon: "Network", tag: "Expert" }
+    ]
+  },
+  {
+    id: "databases",
+    title: "Databases & Caching",
+    description: "Production relational schema tuning, high-performance querying, and distributed in-memory caching.",
+    skills: [
+      { name: "PostgreSQL 17 Database Architecture", level: 94, icon: "Database", tag: "Expert" },
+      { name: "Redis Distributed In-Memory Caching", level: 92, icon: "Zap", tag: "Expert" },
+      { name: "SQL Query Optimization & Indexing", level: 92, icon: "Database", tag: "Expert" },
+      { name: "Database Schema Normalization & ACID", level: 90, icon: "Layers", tag: "Advanced" }
+    ]
+  },
+  {
+    id: "messaging",
+    title: "Messaging & Media Pipelines",
+    description: "Asynchronous event queues, real-time WebSockets, and automated FFmpeg video streaming engines.",
+    skills: [
+      { name: "Apache Kafka (Event-Driven Messaging & Topics)", level: 92, icon: "Radio", tag: "Expert" },
+      { name: "STOMP WebSockets (Real-Time Communication)", level: 90, icon: "Zap", tag: "Advanced" },
+      { name: "FFmpeg (HLS Video Slicing & Transcoding)", level: 93, icon: "Sparkles", tag: "Expert" },
+      { name: "HLS Adaptive Streaming (.m3u8 and .ts)", level: 92, icon: "Layers", tag: "Expert" }
     ]
   },
   {
     id: "frontend",
-    title: "Frontend & Web UI",
-    description: "Crafting reactive, beautiful, and fluid client-side web interfaces.",
+    title: "Frontend & UI",
+    description: "Building responsive, modern client-side user interfaces with React.js and CSS layouts.",
     skills: [
-      { name: "React.js & Hooks", level: 92, icon: "Code2", tag: "Expert" },
-      { name: "JavaScript (ES6+, Async/Await)", level: 90, icon: "FileCode", tag: "Expert" },
-      { name: "HTML5 Semantic Markup", level: 96, icon: "Layout", tag: "Expert" },
-      { name: "CSS3 & Modern Layouts (Flex/Grid)", level: 94, icon: "Palette", tag: "Expert" },
-      { name: "Responsive & Mobile-First Design", level: 93, icon: "Sparkles", tag: "Expert" },
-      { name: "UI Micro-Animations & State", level: 86, icon: "Zap", tag: "Advanced" }
+      { name: "React.js & Modern Component Architecture", level: 90, icon: "Code2", tag: "Advanced" },
+      { name: "JavaScript (ES6+, Async/Await)", level: 90, icon: "FileCode", tag: "Advanced" },
+      { name: "HTML5 Semantic Markup", level: 95, icon: "Layout", tag: "Expert" },
+      { name: "CSS3 (Flexbox, CSS Grid, Responsive Design)", level: 94, icon: "Palette", tag: "Expert" }
     ]
   },
   {
     id: "tools",
-    title: "Databases, Caching & DevOps",
-    description: "In-memory caching, containerization, database modeling, and version control.",
+    title: "Developer Tools & Security",
+    description: "API testing, documentation, version control, and enterprise endpoint security.",
     skills: [
-      { name: "Redis (In-Memory Caching & Session Store)", level: 90, icon: "Zap", tag: "Advanced" },
-      { name: "Docker (Containerization & Compose)", level: 88, icon: "Box", tag: "Advanced" },
-      { name: "MySQL Database & Schema Design", level: 92, icon: "Database", tag: "Expert" },
-      { name: "Git & GitHub Version Control", level: 90, icon: "GitBranch", tag: "Advanced" },
-      { name: "Postman API Testing", level: 92, icon: "Terminal", tag: "Expert" },
-      { name: "Maven Build Tooling", level: 86, icon: "Boxes", tag: "Advanced" }
+      { name: "Git & GitHub Version Control", level: 92, icon: "GitBranch", tag: "Expert" },
+      { name: "Postman API Testing & Automation", level: 94, icon: "Terminal", tag: "Expert" },
+      { name: "Swagger / OpenAPI 3.0 Documentation", level: 92, icon: "Boxes", tag: "Expert" },
+      { name: "JWT Role-Based Access Control (RBAC)", level: 92, icon: "ShieldCheck", tag: "Expert" },
+      { name: "IDOR Vulnerability Elimination", level: 90, icon: "ShieldCheck", tag: "Advanced" }
     ]
   }
 ];
@@ -136,127 +175,170 @@ export const skillsCategories = [
 export const projectsData = [
   {
     id: "enterprise-lms",
-    title: "NexLearn — Microservices Learning Management System (LMS)",
-    tagline: "High-Throughput Distributed Educational Platform with Spring Boot, Kafka, Redis & React",
-    category: "Microservices & Full-Stack",
+    title: "Enterprise Learning Management System (LMS)",
+    tagline: "Scalable 15+ Microservices Platform with Java 17, Spring Boot 3, Kafka, Redis, PostgreSQL 17 & FFmpeg",
+    category: "Microservices & Cloud",
     featured: true,
     image: "/project1.jpg",
-    stats: "Sub-5ms Redis Cache • Real-Time Kafka Streaming",
+    stats: "Sub-10ms DB • 1,000+ Users • 5,000+ Daily Events",
     client: "Nebula Technology / Enterprise EdTech",
-    year: "2025 — 2026 (Active)",
-    description: "Enterprise Learning Management System engineered with microservices architecture, featuring Apache Kafka for event-driven asynchronous processing, Redis for distributed caching, and Docker for containerized deployment.",
-    longDescription: "Architected with independent Spring Boot microservices handling Course Management, Student Enrollments, Video Progress Tracking, and Notification Services. Employs Apache Kafka for high-throughput asynchronous messaging between services, Redis for distributed session caching and rate-limiting, Docker containers for consistent deployment, and a responsive React.js frontend interface.",
-    technologies: ["Core Java", "Spring Boot", "Microservices", "Apache Kafka", "Redis", "Docker", "MySQL", "React.js", "REST APIs", "Hibernate"],
-    metrics: [
-      { label: "Event Pipeline", value: "Apache Kafka" },
-      { label: "Cache Response", value: "< 5ms (Redis)" },
-      { label: "Architecture", value: "Dockerized Microservices" }
+    year: "2025 — Present",
+    description: "Flagship Enterprise E-Learning Platform engineered with 15+ RESTful microservices, event-driven Kafka messaging, Redis caching, and automated FFmpeg video transcoding.",
+    longDescription: "Engineered and maintained an enterprise-scale distributed e-learning platform supporting 1,000+ active users. Incorporates Spring Cloud Gateway and Eureka for service discovery, Apache Kafka event pipelines for asynchronous event processing, Redis for distributed caching, PostgreSQL 17 for high-speed relational storage, and background FFmpeg media transcoding for adaptive bitrate HLS streaming.",
+    technologies: [
+      "Java 17",
+      "Spring Boot 3",
+      "PostgreSQL 17",
+      "Apache Kafka",
+      "Redis",
+      "FFmpeg (HLS)",
+      "Spring Cloud Gateway",
+      "WebSockets",
+      "JWT RBAC",
+      "React.js",
+      "Swagger/OpenAPI 3.0"
     ],
-    liveUrl: "#",
-    githubUrl: "https://github.com"
+    metrics: [
+      { label: "Active Microservices", value: "15+ Services" },
+      { label: "Query Response", value: "< 10ms (PostgreSQL)" },
+      { label: "Daily Event Stream", value: "5,000+ Kafka Events" },
+      { label: "Video Upload Limit", value: "Up to 10 GB" },
+      { label: "HLS Playback Start", value: "< 1s Latency" },
+      { label: "Cart Revenue Recovered", value: "15% – 20%" }
+    ],
+    features: [
+      {
+        title: "Core API Engineering",
+        desc: "Designed RESTful endpoints across distributed Spring Boot services, optimizing PostgreSQL schema queries to achieve sub-10ms response times."
+      },
+      {
+        title: "Event-Driven Abandoned Cart Recovery",
+        desc: "Built an automated 24-hour cart recovery pipeline using Spring Scheduled cron jobs, Apache Kafka, and STOMP WebSockets, recovering an estimated 15%–20% of abandoned cart revenue."
+      },
+      {
+        title: "Video Transcoding & HLS Streaming",
+        desc: "Built an asynchronous video processing engine with FFmpeg that slices lecture videos up to 10 GB into 2-second .ts segments with master playlists (.m3u8), enabling adaptive bitrate streaming and anti-piracy protection with <1s playback start."
+      },
+      {
+        title: "High-Volume Bulk Data Ingestion",
+        desc: "Engineered a high-throughput CSV/Excel student onboarding engine with parallel BCrypt password hashing across CPU cores, accelerating batch onboarding by 3x."
+      },
+      {
+        title: "Online Examination Service",
+        desc: "Developed an assessment module featuring dynamic passing percentages, automated score evaluation, and a 3-hour attempt cooldown rule for test integrity."
+      },
+      {
+        title: "Centralized API Gateway Hub",
+        desc: "Brought the OpenAPI documentation of 18 microservices together in one place on the Spring Cloud Gateway, using custom routing filters."
+      }
+    ],
+    liveUrl: "https://suraj-pawar.vercel.app",
+    githubUrl: "https://github.com/SurajPawar8010"
   },
   {
-    id: "spring-banking",
-    title: "NovaBank — Enterprise Banking & Wallet System",
-    tagline: "Secure Full-Stack Banking Suite with Spring Boot, Hibernate & React",
-    category: "Java & Full-Stack",
+    id: "ffmpeg-hls-streaming",
+    title: "Asynchronous FFmpeg Video Transcoding Engine",
+    tagline: "Background Video Slicing & HLS (.m3u8/.ts) Pipeline with Adaptive Bitrate Streaming",
+    category: "Media & Streaming",
     featured: true,
     image: "/project2.jpg",
-    stats: "Sub-50ms Response • ACID Transactions",
-    client: "Enterprise FinTech Project",
-    year: "2024",
-    description: "Full-stack banking and transaction portal featuring secure user authentication, fund transfers, account balance tracking, and real-time transaction ledgers.",
-    longDescription: "Engineered with Spring Boot REST microservices and Hibernate ORM connecting to a MySQL database with strict transaction isolation (ACID). The frontend is a reactive React.js single-page application with responsive financial widgets.",
-    technologies: ["Core Java", "Spring Boot", "Hibernate", "MySQL", "React.js", "REST APIs", "CSS3"],
+    stats: "Up to 10 GB Uploads • <1s Playback Start",
+    client: "E-Learning Media Infrastructure",
+    year: "2025",
+    description: "Automated media processing pipeline that ingests raw lecture videos, performs background FFmpeg transcoding, and generates anti-piracy HLS segment streams.",
+    longDescription: "Eliminated client playback buffering by asynchronously slicing raw educational videos into 2-second .ts segments with master index playlists (.m3u8). Implements non-blocking background queue workers, adaptive bitrate delivery, and secure signed media endpoints that prevent direct video downloading or unauthorized piracy.",
+    technologies: ["FFmpeg", "Java 17", "Spring Boot 3", "HLS Streaming", "PostgreSQL 17", "Redis", "REST APIs"],
     metrics: [
-      { label: "Security", value: "JWT Auth" },
-      { label: "Transaction Speed", value: "< 45ms" },
+      { label: "File Upload Capacity", value: "Up to 10 GB" },
+      { label: "Playback Startup", value: "< 1s" },
+      { label: "Segment Duration", value: "2s .ts Slices" }
+    ],
+    liveUrl: "https://suraj-pawar.vercel.app",
+    githubUrl: "https://github.com/SurajPawar8010"
+  },
+  {
+    id: "kafka-cart-recovery",
+    title: "Event-Driven Cart Recovery & Notification Pipeline",
+    tagline: "Asynchronous Pipeline with Apache Kafka, Redis, Scheduled Cron & WebSockets",
+    category: "Kafka & Events",
+    featured: true,
+    image: "/project3.jpg",
+    stats: "15%–20% Revenue Recovered • 5k+ Daily Events",
+    client: "E-Commerce & Course Enrollment",
+    year: "2025",
+    description: "Automated event pipeline monitoring checkout drop-offs and triggering scheduled multi-channel re-engagement alerts via Kafka and WebSockets.",
+    longDescription: "Orchestrated with Spring Scheduled cron jobs and Apache Kafka event topics to detect uncompleted checkouts after 24 hours. Pushes real-time alerts through STOMP WebSockets and background dispatchers, successfully reclaiming 15%–20% of abandoned cart revenue while decoupling customer-facing checkout services from notification workers.",
+    technologies: ["Apache Kafka", "Redis", "Spring Boot 3", "STOMP WebSockets", "PostgreSQL 17", "Spring Scheduling"],
+    metrics: [
+      { label: "Revenue Recovery", value: "15% – 20%" },
+      { label: "Daily Events", value: "5,000+ Events" },
+      { label: "Event Latency", value: "< 50ms" }
+    ],
+    liveUrl: "https://suraj-pawar.vercel.app",
+    githubUrl: "https://github.com/SurajPawar8010"
+  },
+  {
+    id: "bulk-data-ingestion",
+    title: "High-Volume Student Onboarding Engine",
+    tagline: "Multi-Core Parallel CSV/Excel Parser with Multithreaded BCrypt Password Hashing",
+    category: "Microservices & Cloud",
+    featured: false,
+    image: "/project1.jpg",
+    stats: "3x Faster Onboarding • Parallel CPU Cores",
+    client: "Enterprise Batch Ingestion",
+    year: "2025",
+    description: "High-throughput batch onboarding engine processing institutional student registries with parallel BCrypt hashing and batch database insertions.",
+    longDescription: "Engineered to eliminate bottleneck delays during institution-wide student enrollments. Utilizes Java Streams and ForkJoinPool parallel threads to distribute CPU-intensive BCrypt password hashing across multiple CPU cores, accelerating batch onboarding speeds by 3x with atomic PostgreSQL transactions.",
+    technologies: ["Java 17", "Spring Boot 3", "PostgreSQL 17", "BCrypt", "ForkJoinPool", "Apache POI"],
+    metrics: [
+      { label: "Throughput Boost", value: "3x Speedup" },
+      { label: "Hashing Strategy", value: "Parallel BCrypt" },
       { label: "Data Integrity", value: "100% ACID" }
     ],
-    liveUrl: "#",
-    githubUrl: "https://github.com"
+    liveUrl: "https://suraj-pawar.vercel.app",
+    githubUrl: "https://github.com/SurajPawar8010"
   },
   {
-    id: "omni-commerce",
-    title: "OmniCart — E-Commerce & Inventory Management",
-    tagline: "Scalable Online Retail Platform with Spring Boot Backend & React UI",
-    category: "Full-Stack Web",
-    featured: true,
-    image: "/project3.jpg",
-    stats: "5,000+ SKU Catalog • Instant Search",
-    client: "Retail Systems",
-    year: "2024",
-    description: "Production-grade e-commerce application supporting product catalog browsing, cart operations, order placement, and merchant inventory control.",
-    longDescription: "Developed using Spring Boot, Spring Data JPA, and MySQL on the backend, communicating through clean RESTful APIs with an interactive React frontend equipped with instant filtering and responsive cart modals.",
-    technologies: ["React.js", "Java", "Spring Boot", "Hibernate", "JDBC", "MySQL", "HTML5/CSS3"],
-    metrics: [
-      { label: "Product Queries", value: "< 30ms" },
-      { label: "Cart Latency", value: "Real-time" },
-      { label: "Database", value: "MySQL 8.0" }
-    ],
-    liveUrl: "#",
-    githubUrl: "https://github.com"
-  },
-  {
-    id: "mediconnect-portal",
-    title: "MediCare — Clinic & Doctor Appointment Hub",
-    tagline: "Patient Management & Schedule Automation Platform",
-    category: "Java & Full-Stack",
-    featured: false,
-    image: "/project1.jpg",
-    stats: "Automated Booking • Role-Based Access",
-    client: "Healthcare Solutions",
-    year: "2023",
-    description: "Streamlined medical booking portal connecting patients with specialized physicians, complete with doctor schedule management and medical history records.",
-    longDescription: "Employs Core Java, JDBC, and Spring Boot to handle relational entity mappings, appointment slot validations, and administrative reporting with a clean, patient-centric React.js interface.",
-    technologies: ["Core Java", "Spring MVC", "JDBC", "MySQL", "React.js", "CSS3", "Postman"],
-    metrics: [
-      { label: "Booking Speed", value: "Instant" },
-      { label: "Uptime", value: "99.9%" },
-      { label: "Architecture", value: "RESTful MVC" }
-    ],
-    liveUrl: "#",
-    githubUrl: "https://github.com"
-  },
-  {
-    id: "task-nexus",
-    title: "TaskNexus — Collaborative Project Management",
-    tagline: "Kanban Board & Team Sprint Tracking Application",
-    category: "Full-Stack Web",
+    id: "gateway-openapi-hub",
+    title: "Centralized Microservices API Gateway Hub",
+    tagline: "Unified Swagger / OpenAPI 3.0 Documentation & Routing with Spring Cloud Gateway",
+    category: "Microservices & Cloud",
     featured: false,
     image: "/project2.jpg",
-    stats: "Real-time Task Drag & Drop",
-    client: "Agile Development Teams",
-    year: "2024",
-    description: "Agile sprint management workspace with interactive Kanban boards, task assignment, priority tagging, and sprint burndown tracking.",
-    longDescription: "Built with a Spring Boot REST API layer and MySQL persistence, featuring a sleek React frontend with smooth interactive drag-and-drop mechanics and optimistic UI updates.",
-    technologies: ["React.js", "JavaScript (ES6+)", "Spring Boot", "Hibernate", "MySQL", "CSS3"],
+    stats: "18 Services Unified • Custom Route Filters",
+    client: "Enterprise Infrastructure",
+    year: "2025",
+    description: "Single-entry reverse proxy and API Gateway aggregating documentation, authentication checks, and route filtering across 18 microservices.",
+    longDescription: "Configured custom Spring Cloud Gateway routing filters that dynamically discover service instances via Eureka and aggregate interactive OpenAPI 3.0 / Swagger specifications into a consolidated developer dashboard. Centralizes JWT verification and rate limiting at the perimeter.",
+    technologies: ["Spring Cloud Gateway", "Eureka", "Swagger / OpenAPI 3.0", "JWT RBAC", "Java 17", "Spring Boot 3"],
     metrics: [
-      { label: "State Updates", value: "Sub-16ms" },
-      { label: "Test Coverage", value: "JUnit & Postman" }
+      { label: "Unified Endpoints", value: "18 Microservices" },
+      { label: "Route Filter", value: "Zero Downtime" },
+      { label: "Security", value: "Perimeter JWT" }
     ],
-    liveUrl: "#",
-    githubUrl: "https://github.com"
+    liveUrl: "https://suraj-pawar.vercel.app",
+    githubUrl: "https://github.com/SurajPawar8010"
   },
   {
-    id: "aura-dining",
-    title: "BistroAura — Restaurant Reservation & Menu System",
-    tagline: "Interactive Table Booking & Digital Dining Experience",
-    category: "Full-Stack Web",
+    id: "import-export-portal",
+    title: "Enterprise Import-Export Operations System",
+    tagline: "CRUD Management & Shipment Tracking Platform with Spring Boot & React",
+    category: "Full-Stack",
     featured: false,
     image: "/project3.jpg",
-    stats: "Interactive Seating Plan",
-    client: "Hospitality Industry",
-    year: "2023",
-    description: "Digital restaurant management platform allowing guests to view visual table layouts, reserve dining times, and browse dynamic digital menus.",
-    longDescription: "Powered by Java, JDBC database connectivity, and Spring MVC services paired with a responsive modern React interface styled with glassmorphic cards and smooth transitions.",
-    technologies: ["Core Java", "JDBC", "MySQL", "React.js", "HTML5", "CSS3"],
+    stats: "End-to-End CRUD • Real-Time Tracking",
+    client: "Logistics Project (Nebula Technology)",
+    year: "2025",
+    description: "Enterprise operations portal managing logistics manifests, customs clearances, shipment statuses, and relational documentation.",
+    longDescription: "Built during internship tenure at Nebula Technology, delivering complete backend CRUD operations in Java and Spring Boot connected to PostgreSQL, alongside interactive client dashboard pages engineered with React.js, HTML5, and responsive CSS.",
+    technologies: ["Java", "Spring Boot", "PostgreSQL", "React.js", "JavaScript", "HTML5", "CSS3", "Git"],
     metrics: [
-      { label: "Mobile Score", value: "99/100" },
-      { label: "Booking Flow", value: "3 Steps" }
+      { label: "Operations", value: "Full CRUD" },
+      { label: "Response", value: "< 25ms" },
+      { label: "Interface", value: "Responsive React" }
     ],
-    liveUrl: "#",
-    githubUrl: "https://github.com"
+    liveUrl: "https://suraj-pawar.vercel.app",
+    githubUrl: "https://github.com/SurajPawar8010"
   }
 ];
 
@@ -265,72 +347,98 @@ export const experienceData = [
     role: "Software Engineer",
     company: "Nebula Technology",
     location: "Pune, Maharashtra, India",
-    period: "Dec 2025 — Present",
+    period: "Dec 2025 – Present",
     type: "Full-Time",
-    description: "Designing, engineering, and maintaining scalable enterprise software solutions. Currently architecting an enterprise Learning Management System (LMS) utilizing Spring Boot microservices, Apache Kafka for event-driven asynchronous messaging, Redis for distributed caching, and Docker for containerized deployment.",
+    description: "Engineered and maintained 15+ RESTful microservices for an Enterprise E-Learning Platform utilizing Java 17, Spring Boot 3, and PostgreSQL, supporting 1,000+ active users.",
     achievements: [
-      "Promoted to full-time Software Engineer following exceptional performance during 6-month full-stack development internship.",
-      "Lead backend microservices architecture for the flagship Learning Management System (LMS), decoupling course delivery, enrollment workflows, and notification services.",
-      "Engineered Apache Kafka event streams to handle high-throughput asynchronous student enrollment processing and event notifications.",
-      "Implemented Redis in-memory caching for frequently accessed course catalogs and session tokens, reducing database latency by over 60%.",
-      "Containerized microservices with Docker and Docker Compose for consistent local development and production deployments.",
-      "Collaborate across cross-functional engineering teams using Git, code reviews, and Agile sprint workflows."
+      "Engineered and maintained 15+ RESTful microservices for an Enterprise E-Learning Platform utilizing Java 17, Spring Boot 3, and PostgreSQL, supporting 1,000+ active users.",
+      "Implemented asynchronous event pipelines using Apache Kafka and Redis, processing 5,000+ daily notification events with sub-50ms latency while decoupling core services.",
+      "Integrated FFmpeg background video transcoding pipelines, scaling file uploads up to 10 GB and generating HLS (.m3u8 and .ts) streams with <1s playback start.",
+      "Enforced JWT-based Role-Based Access Control (RBAC) and eliminated critical IDOR vulnerabilities across 100% of student cart and payment endpoints.",
+      "Documented REST APIs using Swagger and OpenAPI 3.0."
     ],
-    technologies: ["Core Java", "Spring Boot", "Microservices", "Apache Kafka", "Redis", "Docker", "Hibernate", "JDBC", "React.js", "JavaScript", "MySQL", "REST APIs", "Git"]
+    technologies: [
+      "Java 17",
+      "Spring Boot 3",
+      "PostgreSQL 17",
+      "Apache Kafka",
+      "Redis",
+      "FFmpeg (HLS)",
+      "Spring Cloud (Gateway, Eureka)",
+      "WebSockets",
+      "JWT RBAC",
+      "Swagger / OpenAPI 3.0",
+      "Git"
+    ]
   },
   {
-    role: "Full Stack Developer Intern",
+    role: "Software Engineer Intern",
     company: "Nebula Technology",
     location: "Pune, Maharashtra, India",
-    period: "May 2025 — Nov 2025",
-    type: "Internship (6 Months)",
-    description: "Completed an intensive 6-month full-stack development internship, engineering interactive client-facing modules and scalable backend API integrations.",
+    period: "May 2025 – Nov 2025",
+    type: "Internship",
+    description: "Received hands-on training in the company's development stack, tools, and coding practices, developing both backend service logic and responsive frontend pages.",
     achievements: [
-      "Developed responsive frontend features and dashboards using React.js, modern CSS layouts, and REST API consumption.",
-      "Assisted in backend REST API design, endpoint testing via Postman, and MySQL relational database queries.",
-      "Diagnosed and resolved system bugs, improved user interface responsiveness, and implemented clean code patterns."
+      "Received hands-on training in the company's development stack, tools and coding practices.",
+      "Worked on CRUD operations for an import export project using Java and Spring Boot.",
+      "Worked on frontend pages using HTML, CSS and React."
     ],
-    technologies: ["React.js", "Core Java", "Spring MVC", "JavaScript", "MySQL", "HTML5", "CSS3", "Postman", "Git"]
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "React.js",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "PostgreSQL",
+      "Postman",
+      "Git"
+    ]
+  }
+];
+
+export const educationData = [
+  {
+    degree: "Master of Science (M.Sc.) in Computer Science",
+    institution: "KBP College, Pandharpur",
+    status: "Pursuing",
+    period: "2025 — Present",
+    score: "Enrolled",
+    description: "Postgraduate studies specializing in advanced computer science, distributed cloud computing, algorithmic scalability, and modern software architectures."
   },
   {
-    role: "B.Sc (ECS) Computer Science Graduate",
-    company: "Karmaveer Bhaurao Patil Mahavidyalaya",
-    location: "Pandharpur, Dist-Solapur, Maharashtra",
-    period: "June 2022 — March 2025",
-    type: "B.Sc in Entire Computer Science",
-    description: "Completed rigorous 3-year degree curriculum specializing in Entire Computer Science, covering core programming paradigms, algorithms, databases, and software design.",
-    achievements: [
-      "Completed comprehensive academic and practical coursework in Core Java, Object-Oriented Programming, and Data Structures.",
-      "Mastered Relational Database Management Systems (RDBMS) with MySQL, SQL schema design, and normalization.",
-      "Developed academic capstone software projects showcasing end-to-end full-stack principles and software engineering best practices."
-    ],
-    technologies: ["Core Java", "C++", "Data Structures & Algorithms", "DBMS / SQL", "Web Development", "Operating Systems"]
+    degree: "Bachelor of Computer Science (B.C.S.)",
+    institution: "KBP College, Pandharpur",
+    status: "Graduated 2025",
+    period: "June 2022 — May 2025",
+    score: "68%",
+    description: "Undergraduate curriculum covering Core Java, Object-Oriented Programming (OOPs), Relational Database Management Systems, Data Structures, Web Development, and Software Engineering."
   }
 ];
 
 export const servicesData = [
   {
-    icon: "Layout",
-    title: "Full-Stack Java & React Development",
-    description: "Designing end-to-end web applications combining robust Spring Boot backends with reactive, responsive React.js client interfaces.",
-    deliverables: ["Modern React.js SPAs", "Spring Boot Backend Services", "Hibernate ORM Integration", "Responsive Mobile-First UI"]
-  },
-  {
     icon: "Server",
-    title: "RESTful API Engineering",
-    description: "Building scalable, well-documented, and secure RESTful web services with comprehensive validation and error handling.",
-    deliverables: ["Spring MVC REST Endpoints", "JSON Payload Serialization", "Postman API Documentation", "Role-Based Authentication"]
+    title: "Microservices & Distributed Systems",
+    description: "Architecting decoupled, highly scalable RESTful microservices with Java 17, Spring Boot 3, and Spring Cloud Gateway.",
+    deliverables: ["15+ Production Microservices", "Spring Cloud Service Discovery", "JWT Role-Based Access Control", "Swagger / OpenAPI 3.0 Specs"]
   },
   {
-    icon: "Database",
-    title: "Database Modeling & JDBC Integration",
-    description: "Structuring relational databases in MySQL, optimizing SQL queries, and implementing efficient data access layers.",
-    deliverables: ["MySQL Schema Architecture", "JDBC Connectivity", "Hibernate Entity Mappings", "Data Integrity & ACID Support"]
+    icon: "Zap",
+    title: "Event-Driven Pipelines & Caching",
+    description: "Engineering asynchronous event queues with Apache Kafka and distributed Redis in-memory caching to achieve ultra-low latency.",
+    deliverables: ["Kafka Event Topics & Streams", "5,000+ Daily Event Ingestion", "Sub-50ms Pipeline Latency", "Distributed Redis Session Caching"]
   },
   {
     icon: "Sparkles",
-    title: "Modern Frontend & UI Craftsmanship",
-    description: "Creating silky-smooth, interactive user interfaces with HTML5, CSS3, modern JavaScript, and component-driven architecture.",
-    deliverables: ["Pixel-Perfect Styling", "Subtle Micro-Animations", "Cross-Browser Compatibility", "Performance & Fast Load Times"]
+    title: "Media Processing & HLS Video Streaming",
+    description: "Integrating background FFmpeg transcoding pipelines to convert raw video uploads into secure, adaptive bitrate HLS (.m3u8/.ts) streams.",
+    deliverables: ["Up to 10 GB Video Ingestion", "2-Second .ts Slice Transcoding", "< 1s Instant Playback Startup", "Anti-Piracy Video Protection"]
+  },
+  {
+    icon: "Layout",
+    title: "Database Optimization & Full-Stack UI",
+    description: "Structuring high-performance PostgreSQL 17 relational schemas with sub-10ms queries, paired with reactive React.js client interfaces.",
+    deliverables: ["Sub-10ms PostgreSQL Queries", "Bulk CSV/Excel Data Ingestion", "Parallel BCrypt CPU Hashing", "Responsive React.js Client UIs"]
   }
 ];

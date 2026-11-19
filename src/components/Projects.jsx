@@ -15,7 +15,7 @@ import { playClickSound } from "../utils/soundEffects";
 export default function Projects({ onSelectProject }) {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const categories = ["All", "AI & Full-Stack", "Fintech & Web3", "Creative Tech & 3D", "Cloud & DevOps"];
+  const categories = ["All", "Microservices & Cloud", "Kafka & Events", "Media & Streaming", "Full-Stack"];
 
   const filteredProjects = activeCategory === "All"
     ? projectsData
@@ -38,7 +38,7 @@ export default function Projects({ onSelectProject }) {
             </span>
           </h2>
           <p className="text-sm sm:text-base text-gray-400 max-w-2xl">
-            A curated collection of autonomous AI platforms, high-frequency financial engines, and spatial computing workspaces.
+            Enterprise-scale distributed microservices, event-driven Kafka pipelines, automated FFmpeg HLS streaming engines, and robust PostgreSQL backends.
           </p>
         </div>
 

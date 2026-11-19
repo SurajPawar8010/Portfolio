@@ -88,7 +88,7 @@ export default function Navbar({
               {personalData.name}
             </span>
             <span className="text-[11px] text-cyan-400 font-mono tracking-wider">
-              Software Engineer
+              Backend Software Engineer
             </span>
           </div>
         </button>

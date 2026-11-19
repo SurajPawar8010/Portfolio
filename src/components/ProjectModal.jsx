@@ -127,6 +127,26 @@ export default function ProjectModal({ project, onClose }) {
             <p className="text-gray-400">{project.longDescription}</p>
           </div>
 
+          {/* Architectural Implementations (from Resume) */}
+          {project.features && project.features.length > 0 && (
+            <div className="space-y-3 pt-2">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
+                <CheckCircle className="w-4 h-4 text-emerald-400" /> Key Architectural Engineering Highlights
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {project.features.map((feat, fIdx) => (
+                  <div key={fIdx} className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+                    <p className="text-xs font-bold text-white flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
+                      {feat.title}
+                    </p>
+                    <p className="text-xs text-gray-300 leading-relaxed pl-3">{feat.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Tech Stack Pills */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 flex items-center gap-1.5">

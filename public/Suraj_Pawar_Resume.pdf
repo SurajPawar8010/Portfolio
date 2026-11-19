@@ -1,290 +1,98 @@
 %PDF-1.4
-%âãÏÓ
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 4620 >>
-stream
-0.05 0.08 0.15 rg
-0 740 595.28 102 re f
-0.06 0.73 0.85 rg
-0 737 595.28 3 re f
-BT
-/F2 22 Tf
-1 1 1 rg
-50 802 Td
-(SURAJ PAWAR) Tj
-ET
-BT
-/F1 11 Tf
-0.65 0.75 0.95 rg
-50 782 Td
-(Software Engineer | Java - Spring Boot - Microservices - React.js) Tj
-ET
-BT
-/F1 9 Tf
-0.85 0.90 0.95 rg
-50 754 Td
-(Pune District, Maharashtra, India  |  surajbalupawar1@gmail.com  |  +91 8010613284) Tj
-ET
-BT
-/F2 12 Tf
-0.1 0.2 0.45 rg
-50 710 Td
-(PROFESSIONAL SUMMARY) Tj
-ET
-0.8 0.85 0.9 rg
-50 706 495 1 re f
-BT
-/F1 9.5 Tf
-0.2 0.2 0.2 rg
-50 692 Td
-(Software Engineer at Nebula Technology with a solid foundation in Core Java backend architecture,) Tj
-ET
-BT
-/F1 9.5 Tf
-0.2 0.2 0.2 rg
-50 679 Td
-(Spring Boot microservices, RESTful API design, and modern responsive frontend engineering with) Tj
-ET
-BT
-/F1 9.5 Tf
-0.2 0.2 0.2 rg
-50 666 Td
-(React.js. Proven experience engineering enterprise Learning Management Systems \(LMS\) with Apache Kafka) Tj
-ET
-BT
-/F1 9.5 Tf
-0.2 0.2 0.2 rg
-50 653 Td
-(for event-driven streams, Redis for distributed caching, and Docker containerization.) Tj
-ET
-BT
-/F2 12 Tf
-0.1 0.2 0.45 rg
-50 630 Td
-(WORK EXPERIENCE) Tj
-ET
-0.8 0.85 0.9 rg
-50 626 495 1 re f
-BT
-/F2 10.5 Tf
-0.08 0.1 0.15 rg
-50 612 Td
-(Software Engineer - Nebula Technology) Tj
-ET
-BT
-/F2 9.5 Tf
-0.3 0.35 0.45 rg
-410 612 Td
-(Dec 2025 - Present | Pune, India) Tj
-ET
-BT
-/F1 9 Tf
-0.2 0.2 0.2 rg
-62 598 Td
-(-  Architecting and developing large-scale Enterprise Learning Management System \(LMS\) using Spring Boot microservices.) Tj
-ET
-BT
-/F1 9 Tf
-0.2 0.2 0.2 rg
-62 585.5 Td
-(-  Implemented Apache Kafka event streams for decoupled, high-throughput asynchronous communication between services.) Tj
-ET
-BT
-/F1 9 Tf
-0.2 0.2 0.2 rg
-62 573.0 Td
-(-  Integrated Redis caching mechanisms to optimize high-traffic database query performance and session persistence.) Tj
-ET
-BT
-/F1 9 Tf
-0.2 0.2 0.2 rg
-62 560.5 Td
-(-  Engineered scalable MySQL relational database schemas, query optimizations, and containerized Docker environments.) Tj
-ET
-BT
-/F2 10.5 Tf
-0.08 0.1 0.15 rg
-50 540.0 Td
-(Full Stack Developer Intern - Nebula Technology) Tj
-ET
-BT
-/F2 9.5 Tf
-0.3 0.35 0.45 rg
-385 540.0 Td
-(May 2025 - Nov 2025 | Pune, India) Tj
-ET
-BT
-/F1 9 Tf
-0.2 0.2 0.2 rg
-62 526.0 Td
-(-  Completed 6-month intensive full-stack internship focusing on Core Java, Spring Boot, Hibernate, and React.js.) Tj
-ET
-BT
-/F1 9 Tf
-0.2 0.2 0.2 rg
-62 513.5 Td
-(-  Built responsive, accessible web interfaces consuming secured REST APIs with role-based access control.) Tj
-ET
-BT
-/F1 9 Tf
-0.2 0.2 0.2 rg
-62 501.0 Td
-(-  Participated in agile sprints, code reviews, and Git collaborative version workflows.) Tj
-ET
-BT
-/F2 12 Tf
-0.1 0.2 0.45 rg
-50 478.5 Td
-(EDUCATION) Tj
-ET
-0.8 0.85 0.9 rg
-50 474.5 495 1 re f
-BT
-/F2 10.5 Tf
-0.08 0.1 0.15 rg
-50 460.5 Td
-(Bachelor of Science in Entire Computer Science \(B.Sc ECS\)) Tj
-ET
-BT
-/F2 9.5 Tf
-0.3 0.35 0.45 rg
-415 460.5 Td
-(Completed March 2025) Tj
-ET
-BT
-/F1 9.5 Tf
-0.25 0.25 0.25 rg
-50 446.5 Td
-(Karmaveer Bhaurao Patil Mahavidyalaya, Pandharpur, Dist-Solapur, Maharashtra) Tj
-ET
-BT
-/F1 8.5 Tf
-0.4 0.4 0.4 rg
-50 434.5 Td
-(Key Focus: Data Structures, OOP \(Java\), Database Management, Software Engineering, Web Technologies) Tj
-ET
-BT
-/F2 12 Tf
-0.1 0.2 0.45 rg
-50 418.5 Td
-(TECHNICAL SKILLS) Tj
-ET
-0.8 0.85 0.9 rg
-50 414.5 495 1 re f
-BT
-/F2 9.5 Tf
-0.1 0.15 0.3 rg
-50 400.5 Td
-(Backend Technologies:) Tj
-ET
-BT
-/F1 9 Tf
-0.25 0.25 0.25 rg
-175 400.5 Td
-(Core Java, Spring Boot, Hibernate, JDBC, RESTful APIs, Microservices Architecture) Tj
-ET
-BT
-/F2 9.5 Tf
-0.1 0.15 0.3 rg
-50 387.0 Td
-(Frontend Technologies:) Tj
-ET
-BT
-/F1 9 Tf
-0.25 0.25 0.25 rg
-175 387.0 Td
-(React.js, JavaScript \(ES6+\), HTML5, CSS3, Modern Responsive UI Design) Tj
-ET
-BT
-/F2 9.5 Tf
-0.1 0.15 0.3 rg
-50 373.5 Td
-(Streaming & Caching:) Tj
-ET
-BT
-/F1 9 Tf
-0.25 0.25 0.25 rg
-175 373.5 Td
-(Apache Kafka, Redis Distributed Caching) Tj
-ET
-BT
-/F2 9.5 Tf
-0.1 0.15 0.3 rg
-50 360.0 Td
-(Databases & DevOps:) Tj
-ET
-BT
-/F1 9 Tf
-0.25 0.25 0.25 rg
-175 360.0 Td
-(MySQL Relational Database, Docker, Git, GitHub, Maven) Tj
-ET
-BT
-/F2 12 Tf
-0.1 0.2 0.45 rg
-50 338.5 Td
-(VERIFIED INDUSTRY CERTIFICATIONS) Tj
-ET
-0.8 0.85 0.9 rg
-50 334.5 495 1 re f
-BT
-/F2 9.5 Tf
-0.08 0.1 0.15 rg
-50 320.5 Td
-(-  Commonwealth Bank - Software Engineering Job Simulation) Tj
-ET
-BT
-/F1 8.5 Tf
-0.35 0.4 0.5 rg
-415 320.5 Td
-(Forage | Completed Sept 2025) Tj
-ET
-BT
-/F2 9.5 Tf
-0.08 0.1 0.15 rg
-50 307.5 Td
-(-  DATACOM - Software Development Job Simulation) Tj
-ET
-BT
-/F1 8.5 Tf
-0.35 0.4 0.5 rg
-415 307.5 Td
-(Forage | Completed Sept 2025) Tj
-ET
-BT
-/F1 8 Tf
-0.55 0.55 0.55 rg
-185 25 Td
-(Suraj Pawar - Software Engineer Portfolio & Resume  |  +91 8010613284) Tj
-ET
-endstream
+<<
+/A <<
+/S /URI /Type /Action /URI (mailto:surajbalupawar1@gmail.com)
+>> /Border [ 0 0 0 ] /Rect [ 242.379 722.2 358.542 733 ] /Subtype /Link /Type /Annot
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.linkedin.com/in/suraj-pawar-2a258633b/)
+>> /Border [ 0 0 0 ] /Rect [ 370.89 722.2 404.91 733 ] /Subtype /Link /Type /Annot
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/A <<
+/S /URI /Type /Action /URI (https://suraj-pawar.vercel.app)
+>> /Border [ 0 0 0 ] /Rect [ 417.258 722.2 450.27 733 ] /Subtype /Link /Type /Annot
+>>
+endobj
+7 0 obj
+<<
+/Annots [ 4 0 R 5 0 R 6 0 R ] /Contents 11 0 R /MediaBox [ 0 0 612 792 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+8 0 obj
+<<
+/PageMode /UseNone /Pages 10 0 R /Type /Catalog
+>>
+endobj
+9 0 obj
+<<
+/Author (\(anonymous\)) /CreationDate (D:20261119113106+05'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261119113106+05'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+>>
+endobj
+10 0 obj
+<<
+/Count 1 /Kids [ 7 0 R ] /Type /Pages
+>>
+endobj
+11 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 3139
+>>
+stream
+Gau0E?$G!n&q/*0W0b_k%4M'<I-fOA`L%o1fOb+2]BAsc&Ig.Se/G`*LH52#Hb1SW8;JU\OF2V\<ibM/eZE$jMbO&WoY4^'FKqK?Y:[%r>-,h\)f8bPBXE$Xa"sbufs[mGFKcTH1JG:0ZeK#XIFIJ*aKR_mY1]LZo*cR@jkeW9`4e-44ghJ1X'Mi&hf-h(DD,&?R,?-m=*-0agsL65@5*$oMiY7?-aeu#_33^Gqq)hA.]fo/=P+k9JPhG#7c1Z0:7l-:Sjd1ZVVuXoA/W(`9-H;ra)LQjIN?cTCE0s!oI<Kp[aDRE=*.`cG'i>6[b3J'DIpqPgQ$=/ZMI&Baj%<%isO_Y_SNJHa)1QFHoh*?OJBh=^=DM:QJ&NN:n(!CdJ05]'UR_J<BW"AKRI+2+H+nd9<A/06KSN--c5f'dkC[if1c,+JZm)@H$>g:,[H>D(P`!h!-mf,44reQU<tmS1*00_*KfcgK5""l\$&<nq=sYq0VS<up%;_d^V(Yc?]B"Q?J_G)gq%fT!XTltlCj;E]8'/s.:7#E5&=h6?.c;B0Y7Sk_fdT/l[7fNe(qWF;6TK-;P+V;R>0D"qcuVF'/_D0pV<P(CG!1mneKEg3^mk()FYT0i]Nn^5M]ep*G5\82/QL'Ot@7XrtP(CkE3f!`?0@J@R&QXmZR3ETY?2qQO(]s8)N?i19#_G`?#n"h'UD,6sX.*Ocn2K@qf\Qe0\*;dnR^B^J>9,-=Z@hGZRL$?MoU4X]=B@P<plJgSg[MSV*;T>>FY>qLLM<ji]LNQWX[9AfOn5iAMH1[@JjA7EF!'&2tKGM1D:?^Y.J@`p;5bbVo`3nk_a,;*Q6\:G!n*Vgdk0W?0diRr&PBf.`M&U\SAi"Z2U,AWnD61@9#1,iB^O5>#L)%PJApbEc<#5V&-U35"3*ogMiK'DjKh^0DSa&SN8<k,6+H0cId>)%Ta6^DfrqoD09X-k9ksICJ+eDg#Zkj^<#OTfI&FLiQdh^7?Cr\@9%TR]pIh0jmVg;%`a+ddH1qU,Qd+_K72f$gO``\$o;8ILlY;;[4M]%-%6I0G)opmMg'U-r4[2Uf!HI#Bp-A>]H`<p1cX%dT_4CP6_Q>'PLGjV[dCLkFBK1rk$N*X-QFoBSLf,S:Ka`Ql7*<=1)X`c1@BL?)IO<pl<9U@H9-RI,N2Y^eq.+bEEgAo6)mep\p$XRKjrO^"jl@On?R!=8+@_ST;@*Fm=)nU(jj<,OWQ!*1Cm0V8c"bTRq1O-%;@.H5>*G(GRqB413YJgLlP2SFBAr(.&/pKY;=%oG.@CZXm'*9ZSDGrtF.'nB`\sNHp3P-H@fU%C]!JJ"FSBgs4d(keGToCco9HNp>M;)4e*RR-F#t4!=[m4ncGUqkf\k_I&SjcZI'%.2XYH[uEcu2B\K'(3/-?j;t,!mF&[bG>LT97+JC1\_T@Br1,<Icbbs2cXSDbP.dD7FfN/ACdolQimMjSQ3Hh]-*0Oe`HX6$$+NmMgXZMU,>nh/%2^?u&lP%l6!eWITdT&+66+'HAoS5&WKp^^dkkDEnd7tjnq8C`'t'$k5;,:^0Fi>`F&<4b?0#k=![<i=`1aK`(YYi\C>(tu^!3QpEH@aQd.KJX7-[-s0NG4F/S2)JA@?<bAgdt16GVt\FIopiT]DUjZ<0aZ:R/]niRFX_3%(L!b=ZW"2p%#0b9e$0"_fVeY;_<Zi;03\me"<H#IKqr!*q*ni/(hl?l2fl^^9Yq6A)c+&]a<SSLOg;%3ou#T"\d3o)8eYW,WTq@kIKE]O.oh`<"^BK<U@^Bg"@ds6Q_=4RdmFeV?RdeSGA@#^GZ%Ii[UuFGQ*CL]FU&/d=[fUfD",\Jf0];++<87mQ+XgDN.dJHBA=bY!<%*)gQ#!LW[fl$f%4.i"9iSCJRtC_p,#V,=8G=st?r\fZUBY!q=_ND#C#MG^`q.e7.XDNqPoJl?UFJHa@negd2RW0Xcnfri3F2r[\AeXG7WSJTQhpGhAUFm/FYA%lP^ZsG3F`tMn*U>8&p^?nk_X!I0UR`I2(!=eff.hfn*ImkE=l^l^f%jH:L'/4nq]=T=7<AY/N"i_'Q),O&/q>c.sKW)*JW60lf9rU(dD>u*Wf6^d?l^fC]:rto'qMHbqUg^BRp;+IaN'a[:_aSDQkZE8.G:rjTR*L/eT1[4_VC31u22d!cNo9_.VE=ua:9Nd<b0St0(.D/!']4eh.*>L00QspTd[.^U,n&sCCA3JN=;BAG%eG>e!r\9TIhNQuWH;7ahg=LhN[h%?m,^L=3r>jtKb>RUAFrBh`^:B':mMC;;h?g4rihXdJ1?P@Panu(?VlCbMYP03NV$WC1*8%VQH1YO!#hkp#@8+*4P?8jnfmZ-<>$hR,eMmdMCcl-APtWo.[5@,at]FhY#Q8$HAmOW.$d-lW.-tgV`8C1HTaOWBT)i\ko6U1;/V'K5$)mFcKdD>r@*\WP8UQZgp(T;=-H%qmIf#RmL8UJc$6&g7k^s.fj*jIdntM.^+,arEEJ@Bq.M>r^P.tI[g\rMkb^]VF>@BdISQWa5q(G=$!_O+GW_O]HkRR.FN?]dM,o60&dIO8,IZ+mPH@rgH]+`(LPCMWglG$0PkqN77tKGE>LRu"<.?*(pK&`Y>;a?H0*6qZTGp#SZ`<PE$@1V>Wbl&s"3!Q:Rr+[l-rTM@NBVVM-j?E&Q@^E`097Dk#n$g9],2m,(aYSAq';,')>m\c[i2iJSVGTTh4:M'.HGBNfCDS#HJ@^XQ90+NeY6gO:)B9RU3[dC`#jD:>(!B*CnB,>8SZPK/#te:-%]6#W)+n6TJ^@r0hgFmf[&#KBsGY)';3D&BN.S^P.HS3O"ABEX,H4dM6)o)'h_F(J@l*r[h;IK-2MK*9.A.mAHgdB5Mak"l2LM\#8[t&rh$4>6(KOGXRnDTSmhsGMQ)oEq^,]NoF1O]J/k]J(Lr8#CcJ"WPir9bWq?"pdUR$]Eito'\<k=Epb+IX-Jk()c"HlS,6c7NkbOgdAu!P]iF"CS]r?KkpKY;RZL'Hm'X)Qf`Bh_]r-st!)qW*b1SDX)!(1iJR9EGBrVDU?e%:NP5+:AJBJRO#Q6gOJ7V't!OVnY)()=0*-<Dg!h%#*]k"E>FeV,_7k!h(0rb`N5^$#1b9u9q6/has,$L-7D!=pl%Rf~>endstream
 endobj
 xref
-0 7
+0 12
 0000000000 65535 f 
-0000000015 00000 n 
-0000000064 00000 n 
-0000000121 00000 n 
-0000000263 00000 n 
-0000004935 00000 n 
-0000005005 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000495 00000 n 
+0000000685 00000 n 
+0000000856 00000 n 
+0000001081 00000 n 
+0000001150 00000 n 
+0000001430 00000 n 
+0000001490 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<669c9b8df4f8cf7bce8b170b96e17ca7><669c9b8df4f8cf7bce8b170b96e17ca7>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 9 0 R
+/Root 8 0 R
+/Size 12
+>>
 startxref
-5080
+4721
 %%EOF

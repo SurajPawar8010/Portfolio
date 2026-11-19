@@ -46,16 +46,17 @@ export default function Hero({ onOpenResume, showToast, onNavigate }) {
     return () => clearTimeout(timeout);
   }, [text, isDeleting, roleIndex, currentRole]);
 
-  const codeSnippet = `// Software Engineer Manifest
+  const codeSnippet = `// Backend Software Engineer Manifest
 const engineer = new SoftwareEngineer({
   name: "${personalData.name}",
-  backend: ["Core Java", "Spring Boot", "Hibernate", "JDBC"],
+  backend: ["Java 17", "Spring Boot 3", "Spring Cloud"],
+  databases: ["PostgreSQL 17", "Redis"],
+  messaging: ["Apache Kafka", "WebSockets", "FFmpeg (HLS)"],
   frontend: ["React.js", "JavaScript", "HTML5", "CSS3"],
-  database: "MySQL",
   status: "Available for Roles"
 });
 
-await engineer.buildScalableApplication();`;
+await engineer.buildScalableMicroservices();`;
 
   const handleCopyCode = () => {
     navigator.clipboard.writeText(codeSnippet);
@@ -67,12 +68,12 @@ await engineer.buildScalableApplication();`;
 
   const handleRunCode = () => {
     playSuccessSound();
-    setTerminalOutput(`⚡ [200 OK] Spring Boot microservices initialized with Kafka streams & Redis cache!`);
+    setTerminalOutput(`⚡ [200 OK] 15+ Microservices operational • Kafka streams active • PostgreSQL <10ms latency`);
     showToast("Microservices simulation executed!");
   };
 
   const quickTechStack = [
-    "Core Java", "Spring Boot", "Microservices", "Apache Kafka", "Redis", "Docker", "React.js", "MySQL", "Hibernate", "JDBC", "REST APIs", "Git"
+    "Java 17", "Spring Boot 3", "Microservices", "PostgreSQL 17", "Apache Kafka", "Redis", "FFmpeg (HLS)", "Spring Cloud", "React.js", "Docker", "WebSockets", "REST APIs", "Swagger"
   ];
 
   return (
@@ -266,10 +267,12 @@ await engineer.buildScalableApplication();`;
                         <span className="text-yellow-300">SoftwareEngineer</span>
                         ({"{\n"}
                         {"  "}name: <span className="text-emerald-300">"{personalData.name}"</span>,{"\n"}
-                        {"  "}stack: [<span className="text-amber-300">"Java"</span>, <span className="text-amber-300">"Spring Boot"</span>, <span className="text-amber-300">"Kafka"</span>, <span className="text-amber-300">"Redis"</span>, <span className="text-amber-300">"Docker"</span>, <span className="text-amber-300">"React"</span>],{"\n"}
+                        {"  "}backend: [<span className="text-amber-300">"Java 17"</span>, <span className="text-amber-300">"Spring Boot 3"</span>],{"\n"}
+                        {"  "}databases: [<span className="text-emerald-300">"PostgreSQL 17"</span>, <span className="text-emerald-300">"Redis"</span>],{"\n"}
+                        {"  "}pipeline: [<span className="text-cyan-300">"Apache Kafka"</span>, <span className="text-cyan-300">"FFmpeg (HLS)"</span>],{"\n"}
                         {"  "}status: <span className="text-emerald-400">"Available for Roles"</span>{"\n"}
                         {"}"});{"\n"}
-                        <span className="text-violet-400">await</span> engineer.<span className="text-cyan-400">buildScalableApplication</span>();
+                        <span className="text-violet-400">await</span> engineer.<span className="text-cyan-400">buildScalableMicroservices</span>();
                       </code>
                     </pre>
                   </div>

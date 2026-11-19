@@ -11,7 +11,7 @@ import {
   Building,
   ExternalLink
 } from "lucide-react";
-import { experienceData, personalData } from "../data/portfolioData";
+import { experienceData, personalData, educationData } from "../data/portfolioData";
 import { playClickSound } from "../utils/soundEffects";
 
 export default function Experience({ onOpenResume }) {
@@ -174,19 +174,32 @@ export default function Experience({ onOpenResume }) {
         ) : (
           /* Education & Honors View */
           <div className="max-w-3xl mx-auto space-y-6">
-            <div className="p-8 rounded-3xl bg-gray-950/80 border border-white/10 backdrop-blur-xl">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="p-6 sm:p-8 rounded-3xl bg-gray-950/80 border border-white/10 backdrop-blur-xl">
+              <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 rounded-2xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
                   <GraduationCap className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">{personalData.resume.education}</h3>
-                  <p className="text-xs text-cyan-400 font-mono">Academic Distinction & Honors</p>
+                  <h3 className="text-xl font-bold text-white">Academic Qualifications & Honors</h3>
+                  <p className="text-xs text-cyan-400 font-mono">Karmaveer Bhaurao Patil (KBP) College, Pandharpur</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-300 leading-relaxed mb-6">
-                Undergraduate student in Computer Science (June 2022 — May 2025) with a strong foundation in Object-Oriented Programming with Core Java, Relational Database Management in MySQL, Data Structures, and Modern Web Engineering.
-              </p>
+
+              {/* Degrees List */}
+              <div className="space-y-4 mb-8">
+                {educationData.map((edu, idx) => (
+                  <div key={idx} className="p-4 sm:p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                      <h4 className="text-base font-bold text-white">{edu.degree}</h4>
+                      <span className="text-xs font-mono text-cyan-300 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-0.5 rounded-full w-fit">
+                        {edu.score ? `${edu.score} • ` : ""}{edu.status}
+                      </span>
+                    </div>
+                    <p className="text-xs text-violet-400 font-medium">{edu.institution} • <span className="text-gray-400 font-mono">{edu.period}</span></p>
+                    <p className="text-xs text-gray-300 leading-relaxed">{edu.description}</p>
+                  </div>
+                ))}
+              </div>
 
               <h4 className="text-xs font-bold uppercase tracking-wider text-violet-400 mb-3 flex items-center gap-2">
                 <Award className="w-4 h-4" /> Professional Certifications & Job Simulations

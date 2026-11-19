@@ -14,7 +14,7 @@ import {
   MapPin, 
   Globe 
 } from "lucide-react";
-import { personalData, experienceData, skillsCategories } from "../data/portfolioData";
+import { personalData, experienceData, skillsCategories, projectsData, educationData } from "../data/portfolioData";
 import { playClickSound } from "../utils/soundEffects";
 
 export default function ResumeModal({ isOpen, onClose, showToast }) {
@@ -133,19 +133,19 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
           {/* Executive Summary */}
           <div>
             <h2 className="text-sm font-bold uppercase tracking-wider text-violet-400 mb-2 flex items-center gap-2">
-              <Briefcase className="w-4 h-4" /> Executive Summary
+              <Briefcase className="w-4 h-4" /> Professional Summary
             </h2>
             <p className="text-sm text-gray-300 leading-relaxed">
-              {personalData.bio} {personalData.about.paragraphs[0]}
+              {personalData.resume.summary}
             </p>
           </div>
 
-          {/* Core Competencies */}
+          {/* Core Technical Expertise */}
           <div>
             <h2 className="text-sm font-bold uppercase tracking-wider text-violet-400 mb-3 flex items-center gap-2">
-              <Code2 className="w-4 h-4" /> Core Technical Expertise
+              <Code2 className="w-4 h-4" /> Technical Skills
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {skillsCategories.map((cat) => (
                 <div key={cat.id} className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
                   <h3 className="text-xs font-semibold text-white mb-2">{cat.title}</h3>
@@ -161,10 +161,10 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
             </div>
           </div>
 
-          {/* Work History */}
+          {/* Work Experience */}
           <div>
             <h2 className="text-sm font-bold uppercase tracking-wider text-violet-400 mb-4 flex items-center gap-2">
-              <Briefcase className="w-4 h-4" /> Professional Experience
+              <Briefcase className="w-4 h-4" /> Work Experience
             </h2>
             <div className="space-y-6">
               {experienceData.map((exp, i) => (
@@ -179,13 +179,10 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
                       {exp.period}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-300 mt-2 mb-2 leading-relaxed">
-                    {exp.description}
-                  </p>
-                  <ul className="space-y-1">
+                  <ul className="space-y-1.5 mt-3">
                     {exp.achievements.map((ach, idx) => (
-                      <li key={idx} className="text-xs text-gray-400 flex items-start gap-2">
-                        <span className="text-violet-400 font-bold">•</span>
+                      <li key={idx} className="text-xs text-gray-300 flex items-start gap-2 leading-relaxed">
+                        <span className="text-violet-400 font-bold shrink-0">•</span>
                         <span>{ach}</span>
                       </li>
                     ))}
@@ -195,15 +192,73 @@ export default function ResumeModal({ isOpen, onClose, showToast }) {
             </div>
           </div>
 
+          {/* Key Projects (From Resume) */}
+          <div>
+            <h2 className="text-sm font-bold uppercase tracking-wider text-violet-400 mb-4 flex items-center gap-2">
+              <Code2 className="w-4 h-4" /> Featured Projects
+            </h2>
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+                <div>
+                  <h3 className="text-base font-bold text-white">
+                    Enterprise Learning Management System (LMS)
+                  </h3>
+                  <p className="text-xs font-mono text-cyan-400 mt-0.5">
+                    Java 17, Spring Boot 3, Kafka, Redis, PostgreSQL, FFmpeg
+                  </p>
+                </div>
+                <span className="text-xs font-mono text-gray-400 bg-white/5 px-2.5 py-1 rounded-full w-fit">
+                  2025 — Present
+                </span>
+              </div>
+
+              <ul className="space-y-2 text-xs text-gray-300 leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400 font-bold shrink-0">•</span>
+                  <span><strong className="text-white">Core API Engineering:</strong> Designed RESTful endpoints across distributed Spring Boot services, optimizing PostgreSQL schema queries to achieve sub-10ms response times.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400 font-bold shrink-0">•</span>
+                  <span><strong className="text-white">Event-Driven Abandoned Cart Recovery:</strong> Built an automated 24-hour cart recovery pipeline using Spring Scheduled cron jobs, Apache Kafka, and STOMP WebSockets, recovering an estimated 15%–20% of abandoned cart revenue.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400 font-bold shrink-0">•</span>
+                  <span><strong className="text-white">Video Transcoding & HLS Streaming:</strong> Built an asynchronous video processing engine with FFmpeg that slices lecture videos into 2-second .ts segments with master playlists, enabling adaptive bitrate streaming and anti-piracy protection.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400 font-bold shrink-0">•</span>
+                  <span><strong className="text-white">High-Volume Bulk Data Ingestion:</strong> Engineered a high-throughput CSV/Excel student onboarding engine with parallel BCrypt password hashing across CPU cores, accelerating batch onboarding by 3x.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400 font-bold shrink-0">•</span>
+                  <span><strong className="text-white">Online Examination Service:</strong> Developed an assessment module featuring dynamic passing percentages, automated score evaluation, and a 3-hour attempt cooldown rule for test integrity.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400 font-bold shrink-0">•</span>
+                  <span><strong className="text-white">Centralized API Gateway Hub:</strong> Brought the OpenAPI documentation of 18 microservices together in one place on the Gateway, using custom routing filters.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           {/* Education & Certifications */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-white/10">
             <div>
               <h2 className="text-sm font-bold uppercase tracking-wider text-violet-400 mb-3 flex items-center gap-2">
                 <GraduationCap className="w-4 h-4" /> Education
               </h2>
-              <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                <h3 className="text-sm font-bold text-white">{personalData.resume.education}</h3>
-                <p className="text-xs text-gray-400 mt-1">Core Java, Spring Boot, MySQL Database Management & Full-Stack Web Development</p>
+              <div className="space-y-3">
+                {educationData.map((edu, idx) => (
+                  <div key={idx} className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-xs font-bold text-white">{edu.degree}</h3>
+                      <span className="text-[10px] font-mono text-cyan-300 bg-cyan-500/10 px-2 py-0.5 rounded-md">
+                        {edu.score ? `${edu.score} • ` : ""}{edu.status}
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-gray-400">{edu.institution}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
