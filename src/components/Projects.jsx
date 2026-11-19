@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { 
   Briefcase, 
-  ExternalLink, 
   Sparkles, 
   Layers, 
   ArrowUpRight, 
   Maximize2,
   TrendingUp
 } from "lucide-react";
-import { GithubIcon } from "./SocialIcons";
 import { projectsData } from "../data/portfolioData";
 import { playClickSound } from "../utils/soundEffects";
 
@@ -151,40 +149,17 @@ export default function Projects({ onSelectProject }) {
                   </div>
 
                   {/* Action Bar */}
-                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                  <div className="pt-4 border-t border-white/5">
                     <button
                       onClick={() => {
                         playClickSound();
                         onSelectProject(project);
                       }}
-                      className="text-xs font-semibold text-violet-400 hover:text-violet-300 flex items-center gap-1 transition-colors"
+                      className="w-full py-2.5 rounded-xl bg-violet-600/15 hover:bg-violet-600 text-violet-300 hover:text-white border border-violet-500/25 hover:border-violet-500 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm group/btn"
                     >
-                      <span>Deep Dive</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
+                      <span>Architecture Deep Dive</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     </button>
-
-                    <div className="flex items-center gap-2">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={playClickSound}
-                        title="GitHub Code"
-                        className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition-colors"
-                      >
-                        <GithubIcon className="w-3.5 h-3.5" />
-                      </a>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={playClickSound}
-                        title="Live Demo"
-                        className="p-2 rounded-xl bg-violet-600/20 hover:bg-violet-600 text-violet-300 hover:text-white border border-violet-500/30 transition-all"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>

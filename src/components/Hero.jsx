@@ -46,30 +46,33 @@ export default function Hero({ onOpenResume, showToast, onNavigate }) {
     return () => clearTimeout(timeout);
   }, [text, isDeleting, roleIndex, currentRole]);
 
-  const codeSnippet = `// Backend Software Engineer Manifest
-const engineer = new SoftwareEngineer({
-  name: "${personalData.name}",
-  backend: ["Java 17", "Spring Boot 3", "Spring Cloud"],
-  databases: ["PostgreSQL 17", "Redis"],
-  messaging: ["Apache Kafka", "WebSockets", "FFmpeg (HLS)"],
-  frontend: ["React.js", "JavaScript", "HTML5", "CSS3"],
-  status: "Available for Roles"
-});
+  const codeSnippet = `// SoftwareEngineer.java
+@SpringBootApplication
+public class SoftwareEngineer {
+    public static void main(String[] args) {
+        var engineer = Engineer.builder()
+            .name("${personalData.name}")
+            .backend(List.of("Java 17", "Spring Boot 3"))
+            .databases(List.of("PostgreSQL 17", "Redis"))
+            .pipeline(List.of("Apache Kafka", "FFmpeg"))
+            .build();
 
-await engineer.buildScalableMicroservices();`;
+        engineer.deployMicroservices();
+    }
+}`;
 
   const handleCopyCode = () => {
     navigator.clipboard.writeText(codeSnippet);
     setCopiedCode(true);
     playSuccessSound();
-    showToast("Code snippet copied to clipboard!");
+    showToast("Java code snippet copied to clipboard!");
     setTimeout(() => setCopiedCode(false), 2000);
   };
 
   const handleRunCode = () => {
     playSuccessSound();
-    setTerminalOutput(`⚡ [200 OK] 15+ Microservices operational • Kafka streams active • PostgreSQL <10ms latency`);
-    showToast("Microservices simulation executed!");
+    setTerminalOutput(`⚡ [200 OK] Spring Boot 3 running on port 8080 • Kafka active • PostgreSQL <10ms`);
+    showToast("Spring Boot application started!");
   };
 
   const quickTechStack = [
@@ -161,14 +164,10 @@ await engineer.buildScalableMicroservices();`;
             </div>
 
             {/* Quick Stats Pill Strip */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-4 border-t border-white/10 w-full sm:max-w-xs">
+            <div className="pt-4 border-t border-white/10 w-full sm:max-w-xs">
               <div>
                 <p className="text-2xl font-extrabold text-white font-mono">{personalData.yearsExperience}</p>
-                <p className="text-xs text-gray-400">Years Experience</p>
-              </div>
-              <div>
-                <p className="text-2xl font-extrabold text-cyan-400 font-mono">{personalData.projectsCompleted}</p>
-                <p className="text-xs text-gray-400">Shipped Projects</p>
+                <p className="text-xs text-gray-400">Industry Experience</p>
               </div>
             </div>
           </div>
@@ -236,7 +235,7 @@ await engineer.buildScalableMicroservices();`;
                       <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
                       <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                      <span className="ml-2 text-[11px] text-gray-400">Architect.ts</span>
+                      <span className="ml-2 text-[11px] text-gray-400">SoftwareEngineer.java</span>
                     </div>
 
                     <div className="flex items-center gap-1.5">
@@ -261,18 +260,21 @@ await engineer.buildScalableMicroservices();`;
                   <div className="p-3 text-[11px] overflow-x-auto no-scrollbar text-gray-300 leading-relaxed max-h-36 overflow-y-auto">
                     <pre>
                       <code>
-                        <span className="text-violet-400">const</span>{" "}
-                        <span className="text-cyan-300">engineer</span> ={" "}
-                        <span className="text-emerald-400">new</span>{" "}
-                        <span className="text-yellow-300">SoftwareEngineer</span>
-                        ({"{\n"}
-                        {"  "}name: <span className="text-emerald-300">"{personalData.name}"</span>,{"\n"}
-                        {"  "}backend: [<span className="text-amber-300">"Java 17"</span>, <span className="text-amber-300">"Spring Boot 3"</span>],{"\n"}
-                        {"  "}databases: [<span className="text-emerald-300">"PostgreSQL 17"</span>, <span className="text-emerald-300">"Redis"</span>],{"\n"}
-                        {"  "}pipeline: [<span className="text-cyan-300">"Apache Kafka"</span>, <span className="text-cyan-300">"FFmpeg (HLS)"</span>],{"\n"}
-                        {"  "}status: <span className="text-emerald-400">"Available for Roles"</span>{"\n"}
-                        {"}"});{"\n"}
-                        <span className="text-violet-400">await</span> engineer.<span className="text-cyan-400">buildScalableMicroservices</span>();
+                        <span className="text-amber-400">@SpringBootApplication</span>{"\n"}
+                        <span className="text-violet-400">public class</span>{" "}
+                        <span className="text-yellow-300">SoftwareEngineer</span> {"{\n"}
+                        {"  "}<span className="text-violet-400">public static void</span>{" "}
+                        <span className="text-cyan-300">main</span>(String[] args) {"{\n"}
+                        {"    "}<span className="text-violet-400">var</span>{" "}
+                        <span className="text-cyan-300">engineer</span> = <span className="text-yellow-300">Engineer</span>.<span className="text-cyan-400">builder</span>(){"\n"}
+                        {"      "}.<span className="text-cyan-300">name</span>(<span className="text-emerald-300">"{personalData.name}"</span>){"\n"}
+                        {"      "}.<span className="text-cyan-300">backend</span>(List.<span className="text-cyan-400">of</span>(<span className="text-amber-300">"Java 17"</span>, <span className="text-amber-300">"Spring Boot 3"</span>)){"\n"}
+                        {"      "}.<span className="text-cyan-300">databases</span>(List.<span className="text-cyan-400">of</span>(<span className="text-emerald-300">"PostgreSQL 17"</span>, <span className="text-emerald-300">"Redis"</span>)){"\n"}
+                        {"      "}.<span className="text-cyan-300">pipeline</span>(List.<span className="text-cyan-400">of</span>(<span className="text-cyan-300">"Apache Kafka"</span>, <span className="text-cyan-300">"FFmpeg"</span>)){"\n"}
+                        {"      "}.<span className="text-cyan-400">build</span>();{"\n\n"}
+                        {"    "}engineer.<span className="text-cyan-400">deployMicroservices</span>();{"\n"}
+                        {"  "}{"}\n"}
+                        {"}"}
                       </code>
                     </pre>
                   </div>

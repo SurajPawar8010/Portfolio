@@ -185,6 +185,14 @@ export const projectsData = [
     year: "2025 — Present",
     description: "Flagship Enterprise E-Learning Platform engineered with 15+ RESTful microservices, event-driven Kafka messaging, Redis caching, and automated FFmpeg video transcoding.",
     longDescription: "Engineered and maintained an enterprise-scale distributed e-learning platform supporting 1,000+ active users. Incorporates Spring Cloud Gateway and Eureka for service discovery, Apache Kafka event pipelines for asynchronous event processing, Redis for distributed caching, PostgreSQL 17 for high-speed relational storage, and background FFmpeg media transcoding for adaptive bitrate HLS streaming.",
+    systemFlow: [
+      "Client Apps (React/Mobile)",
+      "Spring Cloud Gateway (JWT)",
+      "Apache Kafka Event Bus",
+      "Spring Boot Microservices",
+      "PostgreSQL 17 / Redis",
+      "FFmpeg HLS CDN"
+    ],
     technologies: [
       "Java 17",
       "Spring Boot 3",
@@ -199,41 +207,39 @@ export const projectsData = [
       "Swagger/OpenAPI 3.0"
     ],
     metrics: [
-      { label: "Active Microservices", value: "15+ Services" },
-      { label: "Query Response", value: "< 10ms (PostgreSQL)" },
-      { label: "Daily Event Stream", value: "5,000+ Kafka Events" },
-      { label: "Video Upload Limit", value: "Up to 10 GB" },
-      { label: "HLS Playback Start", value: "< 1s Latency" },
-      { label: "Cart Revenue Recovered", value: "15% – 20%" }
+      { label: "Active Microservices", value: "15+ Services", icon: "Cpu" },
+      { label: "Query Response", value: "< 10ms", icon: "Zap" },
+      { label: "Daily Event Stream", value: "5,000+ Events", icon: "Activity" },
+      { label: "Video Upload Limit", value: "Up to 10 GB", icon: "Database" },
+      { label: "HLS Playback Start", value: "< 1s Latency", icon: "Clock" },
+      { label: "Cart Revenue Recovered", value: "15% – 20%", icon: "ShieldCheck" }
     ],
     features: [
       {
-        title: "Core API Engineering",
-        desc: "Designed RESTful endpoints across distributed Spring Boot services, optimizing PostgreSQL schema queries to achieve sub-10ms response times."
+        title: "Core API Engineering & Low-Latency Queries",
+        desc: "Designed RESTful endpoints across distributed Spring Boot services, optimizing PostgreSQL schema queries and connection pools to achieve sub-10ms response times under production loads."
       },
       {
         title: "Event-Driven Abandoned Cart Recovery",
-        desc: "Built an automated 24-hour cart recovery pipeline using Spring Scheduled cron jobs, Apache Kafka, and STOMP WebSockets, recovering an estimated 15%–20% of abandoned cart revenue."
+        desc: "Built an automated 24-hour cart recovery pipeline using Spring Scheduled cron jobs, Apache Kafka topics, and STOMP WebSockets, recovering an estimated 15%–20% of abandoned cart revenue."
       },
       {
-        title: "Video Transcoding & HLS Streaming",
-        desc: "Built an asynchronous video processing engine with FFmpeg that slices lecture videos up to 10 GB into 2-second .ts segments with master playlists (.m3u8), enabling adaptive bitrate streaming and anti-piracy protection with <1s playback start."
+        title: "Asynchronous FFmpeg Video Transcoding & HLS Streaming",
+        desc: "Built a background video processing engine with FFmpeg that slices lecture videos up to 10 GB into 2-second .ts segments with master playlists (.m3u8), enabling adaptive bitrate streaming and anti-piracy protection with <1s playback start."
       },
       {
-        title: "High-Volume Bulk Data Ingestion",
-        desc: "Engineered a high-throughput CSV/Excel student onboarding engine with parallel BCrypt password hashing across CPU cores, accelerating batch onboarding by 3x."
+        title: "High-Volume Bulk Student Onboarding Engine",
+        desc: "Engineered a high-throughput CSV/Excel student onboarding engine with parallel BCrypt password hashing across CPU cores via ForkJoinPool, accelerating batch onboarding by 3x."
       },
       {
-        title: "Online Examination Service",
+        title: "Online Examination Service & Integrity Engine",
         desc: "Developed an assessment module featuring dynamic passing percentages, automated score evaluation, and a 3-hour attempt cooldown rule for test integrity."
       },
       {
-        title: "Centralized API Gateway Hub",
-        desc: "Brought the OpenAPI documentation of 18 microservices together in one place on the Spring Cloud Gateway, using custom routing filters."
+        title: "Centralized Microservices API Gateway Hub",
+        desc: "Brought the OpenAPI documentation of 18 microservices together in one place on the Spring Cloud Gateway, using custom routing filters and perimeter JWT authentication."
       }
-    ],
-    liveUrl: "https://suraj-pawar.vercel.app",
-    githubUrl: "https://github.com/SurajPawar8010"
+    ]
   },
   {
     id: "ffmpeg-hls-streaming",
@@ -247,14 +253,39 @@ export const projectsData = [
     year: "2025",
     description: "Automated media processing pipeline that ingests raw lecture videos, performs background FFmpeg transcoding, and generates anti-piracy HLS segment streams.",
     longDescription: "Eliminated client playback buffering by asynchronously slicing raw educational videos into 2-second .ts segments with master index playlists (.m3u8). Implements non-blocking background queue workers, adaptive bitrate delivery, and secure signed media endpoints that prevent direct video downloading or unauthorized piracy.",
+    systemFlow: [
+      "Raw Video Upload (10 GB)",
+      "Spring Boot REST API",
+      "Async Queue Worker",
+      "FFmpeg Slicing Engine",
+      "2s .ts + .m3u8 Playlists",
+      "Secure Signed HLS Stream"
+    ],
     technologies: ["FFmpeg", "Java 17", "Spring Boot 3", "HLS Streaming", "PostgreSQL 17", "Redis", "REST APIs"],
     metrics: [
-      { label: "File Upload Capacity", value: "Up to 10 GB" },
-      { label: "Playback Startup", value: "< 1s" },
-      { label: "Segment Duration", value: "2s .ts Slices" }
+      { label: "File Upload Capacity", value: "Up to 10 GB", icon: "Database" },
+      { label: "Playback Startup", value: "< 1s", icon: "Clock" },
+      { label: "Segment Duration", value: "2s .ts Slices", icon: "Zap" },
+      { label: "Data Protection", value: "Signed Tokens", icon: "ShieldCheck" }
     ],
-    liveUrl: "https://suraj-pawar.vercel.app",
-    githubUrl: "https://github.com/SurajPawar8010"
+    features: [
+      {
+        title: "Non-Blocking Asynchronous Video Ingestion",
+        desc: "Configured Spring Boot async thread pools to accept file uploads up to 10 GB without tying up servlet threads, delegating conversion to worker threads."
+      },
+      {
+        title: "Automated 2-Second HLS Slicing & Playlist Generation",
+        desc: "Scripted FFmpeg CLI commands to slice incoming video streams into 2-second transport stream (.ts) segments and dynamically construct master .m3u8 index manifests."
+      },
+      {
+        title: "Sub-Second Initial Playback Latency",
+        desc: "By generating small, high-density initial chunk sizes, the client media player starts rendering playback in under 1 second without waiting for full video downloads."
+      },
+      {
+        title: "Anti-Piracy Token Authorization",
+        desc: "Integrated ephemeral signed token validation on video segment requests, completely blocking direct scraping or unauthorized mp4 file downloads."
+      }
+    ]
   },
   {
     id: "kafka-cart-recovery",
@@ -268,14 +299,39 @@ export const projectsData = [
     year: "2025",
     description: "Automated event pipeline monitoring checkout drop-offs and triggering scheduled multi-channel re-engagement alerts via Kafka and WebSockets.",
     longDescription: "Orchestrated with Spring Scheduled cron jobs and Apache Kafka event topics to detect uncompleted checkouts after 24 hours. Pushes real-time alerts through STOMP WebSockets and background dispatchers, successfully reclaiming 15%–20% of abandoned cart revenue while decoupling customer-facing checkout services from notification workers.",
+    systemFlow: [
+      "Abandoned Cart (>24h)",
+      "Spring Cron Job",
+      "Kafka 'cart-events' Topic",
+      "Consumer Dispatcher",
+      "Redis Session State",
+      "STOMP WebSocket Alert"
+    ],
     technologies: ["Apache Kafka", "Redis", "Spring Boot 3", "STOMP WebSockets", "PostgreSQL 17", "Spring Scheduling"],
     metrics: [
-      { label: "Revenue Recovery", value: "15% – 20%" },
-      { label: "Daily Events", value: "5,000+ Events" },
-      { label: "Event Latency", value: "< 50ms" }
+      { label: "Revenue Recovery", value: "15% – 20%", icon: "ShieldCheck" },
+      { label: "Daily Events", value: "5,000+ Events", icon: "Activity" },
+      { label: "Event Latency", value: "< 50ms", icon: "Zap" },
+      { label: "Trigger Rule", value: "24h Inactivity", icon: "Clock" }
     ],
-    liveUrl: "https://suraj-pawar.vercel.app",
-    githubUrl: "https://github.com/SurajPawar8010"
+    features: [
+      {
+        title: "Automated 24-Hour Abandonment Detection",
+        desc: "Implemented lightweight Spring Scheduled cron workers that scan PostgreSQL for inactive cart sessions without placing locking overhead on active checkout tables."
+      },
+      {
+        title: "Decoupled Event Streaming via Apache Kafka",
+        desc: "Published cart drop-off payloads to dedicated Kafka topics, isolating notification processing and preventing checkout API slowdowns during peak hours."
+      },
+      {
+        title: "Real-Time STOMP WebSockets Dispatch",
+        desc: "Constructed bi-directional STOMP WebSocket channels to push contextual re-engagement popups and dynamic discount incentives directly to returning users in <50ms."
+      },
+      {
+        title: "Redis Distributed Deduplication",
+        desc: "Maintained notification delivery state with Redis key expirations (TTL) to guarantee that each user receives exactly one recovery notification per abandoned cycle."
+      }
+    ]
   },
   {
     id: "bulk-data-ingestion",
@@ -289,14 +345,39 @@ export const projectsData = [
     year: "2025",
     description: "High-throughput batch onboarding engine processing institutional student registries with parallel BCrypt hashing and batch database insertions.",
     longDescription: "Engineered to eliminate bottleneck delays during institution-wide student enrollments. Utilizes Java Streams and ForkJoinPool parallel threads to distribute CPU-intensive BCrypt password hashing across multiple CPU cores, accelerating batch onboarding speeds by 3x with atomic PostgreSQL transactions.",
+    systemFlow: [
+      "Bulk CSV/Excel Upload",
+      "Streaming Parser (POI)",
+      "ForkJoinPool Parallel Threads",
+      "Multi-Core BCrypt Hashing",
+      "Batch JDBC Insert (500/chunk)",
+      "PostgreSQL 17 (100% ACID)"
+    ],
     technologies: ["Java 17", "Spring Boot 3", "PostgreSQL 17", "BCrypt", "ForkJoinPool", "Apache POI"],
     metrics: [
-      { label: "Throughput Boost", value: "3x Speedup" },
-      { label: "Hashing Strategy", value: "Parallel BCrypt" },
-      { label: "Data Integrity", value: "100% ACID" }
+      { label: "Throughput Boost", value: "3x Speedup", icon: "Zap" },
+      { label: "Hashing Strategy", value: "Parallel BCrypt", icon: "Cpu" },
+      { label: "Data Integrity", value: "100% ACID", icon: "Database" },
+      { label: "Batch Chunk", value: "500 Records", icon: "Clock" }
     ],
-    liveUrl: "https://suraj-pawar.vercel.app",
-    githubUrl: "https://github.com/SurajPawar8010"
+    features: [
+      {
+        title: "Parallel Multi-Core BCrypt Cryptographic Hashing",
+        desc: "Eliminated CPU bottlenecks by orchestrating password hashing across all available CPU threads using ForkJoinPool, achieving a 3x speedup over sequential execution."
+      },
+      {
+        title: "Memory-Efficient Streaming File Parser",
+        desc: "Processed multi-megabyte institutional spreadsheets using Apache POI event streaming, preventing OutOfMemory (OOM) errors even on dense student cohorts."
+      },
+      {
+        title: "Chunked Batch JDBC Persistence",
+        desc: "Grouped database write operations into 500-record transactions in PostgreSQL 17, slashing network round-trips and transaction log contention."
+      },
+      {
+        title: "Strict Validation & Error Reporting",
+        desc: "Pre-validated incoming columns (email formats, duplicate student IDs) and generated instant audit logs for any rejected rows."
+      }
+    ]
   },
   {
     id: "gateway-openapi-hub",
@@ -310,14 +391,39 @@ export const projectsData = [
     year: "2025",
     description: "Single-entry reverse proxy and API Gateway aggregating documentation, authentication checks, and route filtering across 18 microservices.",
     longDescription: "Configured custom Spring Cloud Gateway routing filters that dynamically discover service instances via Eureka and aggregate interactive OpenAPI 3.0 / Swagger specifications into a consolidated developer dashboard. Centralizes JWT verification and rate limiting at the perimeter.",
+    systemFlow: [
+      "Client Request",
+      "Spring Cloud Gateway Filter",
+      "Perimeter JWT & RBAC Check",
+      "Eureka Dynamic Registry",
+      "18 Downstream Microservices",
+      "Aggregated OpenAPI 3.0 UI"
+    ],
     technologies: ["Spring Cloud Gateway", "Eureka", "Swagger / OpenAPI 3.0", "JWT RBAC", "Java 17", "Spring Boot 3"],
     metrics: [
-      { label: "Unified Endpoints", value: "18 Microservices" },
-      { label: "Route Filter", value: "Zero Downtime" },
-      { label: "Security", value: "Perimeter JWT" }
+      { label: "Unified Endpoints", value: "18 Services", icon: "Cpu" },
+      { label: "Route Filter", value: "Zero Downtime", icon: "Activity" },
+      { label: "Security", value: "Perimeter JWT", icon: "ShieldCheck" },
+      { label: "Discovery", value: "Netflix Eureka", icon: "Zap" }
     ],
-    liveUrl: "https://suraj-pawar.vercel.app",
-    githubUrl: "https://github.com/SurajPawar8010"
+    features: [
+      {
+        title: "Dynamic Eureka Service Discovery & Routing",
+        desc: "Connected Spring Cloud Gateway to Netflix Eureka for automatic load-balanced request routing across all registered microservice instances."
+      },
+      {
+        title: "Consolidated Swagger UI / OpenAPI 3.0 Aggregator",
+        desc: "Aggregated separate OpenAPI v3 definitions from 18 microservices into a single, cohesive Swagger UI documentation dashboard."
+      },
+      {
+        title: "Perimeter JWT Authentication & RBAC Filter",
+        desc: "Intercepted and validated Bearer tokens at the gateway boundary, stripping invalid requests and injecting verified claims to eliminate IDOR vulnerabilities downstream."
+      },
+      {
+        title: "Centralized Distributed Rate Limiting",
+        desc: "Implemented Redis token-bucket rate limiters at the perimeter to guard microservices against burst traffic and denial-of-service spikes."
+      }
+    ]
   },
   {
     id: "import-export-portal",
@@ -331,14 +437,39 @@ export const projectsData = [
     year: "2025",
     description: "Enterprise operations portal managing logistics manifests, customs clearances, shipment statuses, and relational documentation.",
     longDescription: "Built during internship tenure at Nebula Technology, delivering complete backend CRUD operations in Java and Spring Boot connected to PostgreSQL, alongside interactive client dashboard pages engineered with React.js, HTML5, and responsive CSS.",
+    systemFlow: [
+      "Logistics Operator",
+      "React.js Client Portal",
+      "Spring Boot REST Controller",
+      "PostgreSQL Relational DB",
+      "Shipment State Machine",
+      "Customs Manifest Export"
+    ],
     technologies: ["Java", "Spring Boot", "PostgreSQL", "React.js", "JavaScript", "HTML5", "CSS3", "Git"],
     metrics: [
-      { label: "Operations", value: "Full CRUD" },
-      { label: "Response", value: "< 25ms" },
-      { label: "Interface", value: "Responsive React" }
+      { label: "Operations", value: "Full CRUD", icon: "Activity" },
+      { label: "Response", value: "< 25ms", icon: "Zap" },
+      { label: "Interface", value: "Responsive React", icon: "Cpu" },
+      { label: "Database", value: "PostgreSQL 17", icon: "Database" }
     ],
-    liveUrl: "https://suraj-pawar.vercel.app",
-    githubUrl: "https://github.com/SurajPawar8010"
+    features: [
+      {
+        title: "Relational Logistics Data Modeling",
+        desc: "Designed relational schemas in PostgreSQL supporting multi-table joins for shipments, container allocations, bills of lading, and carrier logs."
+      },
+      {
+        title: "RESTful CRUD Operations & State Machine",
+        desc: "Constructed comprehensive Spring Boot REST APIs enforcing strict shipment status validation (Draft -> Customs Cleared -> In Transit -> Delivered)."
+      },
+      {
+        title: "Responsive React.js Operational Interface",
+        desc: "Crafted a clean frontend with React.js, featuring search filters, shipment timeline progress bars, and responsive table views."
+      },
+      {
+        title: "Audit Logging & Exportable Manifests",
+        desc: "Integrated automatic status change audit logging and one-click manifest exports for customs compliance and logistics reporting."
+      }
+    ]
   }
 ];
 
