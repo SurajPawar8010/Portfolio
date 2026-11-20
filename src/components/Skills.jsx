@@ -26,7 +26,6 @@ export default function Skills() {
   const currentlyExploring = [
     "Spring Cloud & Microservices",
     "Docker & Containerization",
-    "Full-Stack Next.js 15",
     "Spring Security 6 & JWT",
     "Redis Caching with Spring Boot",
     "Kafka Event-Driven Architecture"

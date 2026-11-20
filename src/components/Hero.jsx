@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { 
-  ArrowRight, 
-  Terminal, 
-  Sparkles, 
-  Code2, 
-  Cpu, 
-  Zap, 
-  Copy, 
-  Check, 
-  Download, 
+import {
+  ArrowRight,
+  Terminal,
+  Sparkles,
+  Code2,
+  Cpu,
+  Zap,
+  Copy,
+  Check,
+  Download,
   Play,
   Layers
 } from "lucide-react";
@@ -83,10 +83,10 @@ public class SoftwareEngineer {
     <section id="home" className="relative min-h-screen pt-24 sm:pt-32 pb-16 sm:pb-20 flex flex-col justify-center overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
-          
+
           {/* Left Column: Headlines & Call to Actions */}
           <div className="lg:col-span-7 flex flex-col space-y-6">
-            
+
             {/* Status Radar Badge */}
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono w-fit backdrop-blur-md shadow-[0_0_20px_rgba(52,211,153,0.15)] animate-fade-in">
               <span className="relative flex h-2 w-2">
@@ -101,7 +101,7 @@ public class SoftwareEngineer {
               <p className="text-gray-400 font-mono text-sm tracking-widest uppercase mb-1">
                 {personalData.greeting} <span className="text-white font-semibold">{personalData.name}</span>
               </p>
-              
+
               <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-[1.15] sm:leading-[1.1] break-words">
                 Sculpting <br className="hidden sm:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-300 to-cyan-300">
@@ -174,14 +174,14 @@ public class SoftwareEngineer {
 
           {/* Right Column: 3D Holographic Avatar Card + Live Terminal */}
           <div className="lg:col-span-5 flex flex-col space-y-6">
-            
+
             {/* Interactive Portrait Card */}
             <div className="relative group">
               {/* Animated Glowing border halo */}
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-violet-600 via-cyan-500 to-pink-500 opacity-30 group-hover:opacity-60 blur-xl transition-all duration-700" />
 
               <div className="relative rounded-3xl bg-gray-950/80 border border-white/15 overflow-hidden backdrop-blur-xl shadow-2xl p-4 sm:p-5">
-                
+
                 {/* Image Showcase */}
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-gray-900 border border-white/10 group-hover:border-violet-500/40 transition-colors">
                   <img
@@ -189,7 +189,6 @@ public class SoftwareEngineer {
                     alt={personalData.name}
                     className="w-full h-full object-cover object-[center_20%] transform transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent" />
 
                   {/* Floating Metric Badges over Avatar */}
                   <div className="absolute top-3 left-3 px-3 py-1.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 flex items-center gap-2 text-xs font-medium text-white shadow-lg">
@@ -197,7 +196,8 @@ public class SoftwareEngineer {
                     <span>Sub-15ms Latency</span>
                   </div>
 
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                  {/* Floating Name & Socials Glass Pill */}
+                  <div className="absolute bottom-3 left-3 right-3 p-2.5 sm:p-3 rounded-2xl bg-gray-950/70 border border-white/10 backdrop-blur-md flex items-center justify-between shadow-lg">
                     <div>
                       <h3 className="text-sm font-bold text-white flex items-center gap-1.5">
                         {personalData.name}

@@ -46,7 +46,6 @@ export default function Footer({ onNavigate }) {
               { name: "Projects", id: "projects" },
               { name: "Skills", id: "skills" },
               { name: "Experience", id: "experience" },
-              { name: "Creative Lab", id: "creativelab" },
               { name: "Contact", id: "contact" }
             ].map((tab) => (
               <button

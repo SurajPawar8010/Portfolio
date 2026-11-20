@@ -12,8 +12,9 @@ import {
   VolumeX, 
   Sparkles, 
   Copy,
-  ExternalLink,
-  X
+  X,
+  Sun,
+  Moon
 } from "lucide-react";
 import { WhatsappIcon } from "./SocialIcons";
 import confetti from "canvas-confetti";
@@ -25,6 +26,8 @@ export default function CommandPalette({
   onClose,
   soundEnabled,
   setSoundEnabled,
+  theme = "dark",
+  onToggleTheme,
   onOpenResume,
   onNavigate,
   showToast
@@ -69,13 +72,6 @@ export default function CommandPalette({
       category: "Navigation",
       icon: Briefcase,
       action: () => onNavigate ? onNavigate("experience") : null
-    },
-    {
-      id: "lab",
-      title: "Interactive Creative Lab",
-      category: "Navigation",
-      icon: Sparkles,
-      action: () => onNavigate ? onNavigate("creativelab") : null
     },
     {
       id: "contact",
@@ -142,6 +138,15 @@ export default function CommandPalette({
       }
     },
     {
+      id: "theme",
+      title: theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode",
+      category: "Settings",
+      icon: theme === "light" ? Moon : Sun,
+      action: () => {
+        if (onToggleTheme) onToggleTheme();
+      }
+    },
+    {
       id: "sound",
       title: soundEnabled ? "Mute Sound Effects" : "Enable Sound Effects",
       category: "Settings",
@@ -152,13 +157,6 @@ export default function CommandPalette({
       }
     }
   ];
-
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const filtered = actions.filter((item) =>
     item.title.toLowerCase().includes(query.toLowerCase()) ||

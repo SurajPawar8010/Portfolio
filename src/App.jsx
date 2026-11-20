@@ -5,7 +5,6 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
-import CreativeLab from "./components/CreativeLab";
 import TestimonialsAndServices from "./components/TestimonialsAndServices";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -18,9 +17,9 @@ import ResumeModal from "./components/ResumeModal";
 import CommandPalette from "./components/CommandPalette";
 import Toast from "./components/Toast";
 
-import { isSoundEnabled, setSoundEnabled as setGlobalSound } from "./utils/soundEffects";
+import { setSoundEnabled as setGlobalSound, playClickSound } from "./utils/soundEffects";
 
-const VALID_TABS = ["home", "about", "projects", "skills", "experience", "creativelab", "contact"];
+const VALID_TABS = ["home", "about", "projects", "skills", "experience", "contact"];
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
@@ -36,6 +35,48 @@ export default function App() {
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [soundEnabled, setSoundState] = useState(true);
   const [toast, setToast] = useState(null);
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      try {
+        const saved = localStorage.getItem("portfolio_theme");
+        if (saved === "light" || saved === "dark") return saved;
+      } catch {
+        // localStorage unavailable
+      }
+    }
+    return "dark";
+  });
+
+  const toggleTheme = () => {
+    playClickSound();
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    try {
+      localStorage.setItem("portfolio_theme", nextTheme);
+    } catch {
+      // ignore
+    }
+    document.documentElement.classList.add("theme-transitioning");
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-transitioning");
+    }, 350);
+    showToast(nextTheme === "light" ? "Switched to Light Mode" : "Switched to Dark Mode");
+  };
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === "light") {
+      root.classList.add("light");
+      root.classList.remove("dark");
+    } else {
+      root.classList.add("dark");
+      root.classList.remove("light");
+    }
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", theme === "light" ? "#f8fafc" : "#030712");
+    }
+  }, [theme]);
 
   const setSoundEnabled = (enabled) => {
     setSoundState(enabled);
@@ -181,9 +222,9 @@ export default function App() {
   }, [resumeOpen, paletteOpen, selectedProject]);
 
   return (
-    <div className="relative min-h-screen bg-[#030712] text-white selection:bg-violet-600 selection:text-white flex flex-col justify-between">
+    <div className={`relative min-h-screen ${theme === "light" ? "bg-[#f8fafc] text-slate-900" : "bg-[#030712] text-white"} selection:bg-violet-600 selection:text-white flex flex-col justify-between`}>
       {/* Interactive Constellation Particle Canvas */}
-      <BackgroundCanvas />
+      <BackgroundCanvas theme={theme} />
 
       {/* Sleek Custom Cursor */}
       <CustomCursor />
@@ -194,6 +235,8 @@ export default function App() {
         onNavigate={navigateTo}
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
+        theme={theme}
+        onToggleTheme={toggleTheme}
         onOpenResume={() => setResumeOpen(true)}
         onOpenPalette={() => setPaletteOpen(true)}
         showToast={showToast}
@@ -211,7 +254,6 @@ export default function App() {
         <Projects onSelectProject={(project) => setSelectedProject(project)} />
         <Skills />
         <Experience onOpenResume={() => setResumeOpen(true)} />
-        <CreativeLab showToast={showToast} />
         <Contact showToast={showToast} />
       </main>
 
@@ -235,6 +277,8 @@ export default function App() {
         onClose={() => setPaletteOpen(false)}
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
+        theme={theme}
+        onToggleTheme={toggleTheme}
         onOpenResume={() => {
           setPaletteOpen(false);
           setResumeOpen(true);

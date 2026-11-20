@@ -6,7 +6,9 @@ import {
   Volume2, 
   VolumeX, 
   FileText, 
-  ArrowUpRight 
+  ArrowUpRight,
+  Sun,
+  Moon
 } from "lucide-react";
 import { personalData } from "../data/portfolioData";
 import { playClickSound } from "../utils/soundEffects";
@@ -16,6 +18,8 @@ export default function Navbar({
   onNavigate,
   soundEnabled, 
   setSoundEnabled, 
+  theme = "dark",
+  onToggleTheme,
   onOpenResume, 
   onOpenPalette,
   showToast 
@@ -29,7 +33,6 @@ export default function Navbar({
     { name: "Projects", id: "projects" },
     { name: "Skills", id: "skills" },
     { name: "Experience", id: "experience" },
-    { name: "Lab", id: "creativelab" },
     { name: "Contact", id: "contact" }
   ];
 
@@ -141,6 +144,20 @@ export default function Navbar({
             {soundEnabled ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
           </button>
 
+          {/* Light / Dark Theme Toggle */}
+          <button
+            onClick={onToggleTheme}
+            title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+            aria-label={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+            className="p-2 rounded-xl bg-white/[0.04] hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 text-xs transition-all flex items-center justify-center cursor-pointer shadow-sm hover:border-violet-500/40"
+          >
+            {theme === "light" ? (
+              <Moon className="w-4 h-4 text-violet-400" />
+            ) : (
+              <Sun className="w-4 h-4 text-amber-400" />
+            )}
+          </button>
+
           {/* Resume / CV Modal Trigger */}
           <button
             onClick={() => {
@@ -165,13 +182,26 @@ export default function Navbar({
 
         {/* Mobile & Tablet Hamburger Controls */}
         <div className="flex lg:hidden items-center gap-2">
-          {/* Audio toggle on mobile (<640px) where desktop actions are hidden */}
-          <div className="sm:hidden">
+          {/* Audio & Theme toggles on mobile (<640px) */}
+          <div className="flex sm:hidden items-center gap-1.5">
             <button
               onClick={handleSoundToggle}
-              className="p-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-xs"
+              title={soundEnabled ? "Mute Tactile Audio" : "Enable Tactile Audio"}
+              className="p-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-xs cursor-pointer"
             >
               {soundEnabled ? <Volume2 className="w-4 h-4 text-violet-400" /> : <VolumeX className="w-4 h-4" />}
+            </button>
+            <button
+              onClick={onToggleTheme}
+              title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+              aria-label={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+              className="p-2 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-xs cursor-pointer"
+            >
+              {theme === "light" ? (
+                <Moon className="w-4 h-4 text-violet-400" />
+              ) : (
+                <Sun className="w-4 h-4 text-amber-400" />
+              )}
             </button>
           </div>
 
@@ -208,6 +238,23 @@ export default function Navbar({
 
           {/* Quick Action Buttons on Mobile (<640px) */}
           <div className="pt-2 flex flex-col sm:hidden gap-2 border-t border-white/10">
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                if (onToggleTheme) onToggleTheme();
+              }}
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/5 text-xs text-gray-300 font-medium cursor-pointer"
+            >
+              {theme === "light" ? (
+                <>
+                  <Moon className="w-4 h-4 text-violet-400" /> Switch to Dark Mode
+                </>
+              ) : (
+                <>
+                  <Sun className="w-4 h-4 text-amber-400" /> Switch to Light Mode
+                </>
+              )}
+            </button>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

@@ -1,7 +1,12 @@
 import React, { useEffect, useRef } from "react";
 
-export default function BackgroundCanvas() {
+export default function BackgroundCanvas({ theme = "dark" }) {
   const canvasRef = useRef(null);
+  const themeRef = useRef(theme);
+
+  useEffect(() => {
+    themeRef.current = theme;
+  }, [theme]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -87,8 +92,11 @@ export default function BackgroundCanvas() {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < 110) {
-            const opacity = (1 - dist / 110) * 0.22;
-            ctx.strokeStyle = `rgba(147, 197, 253, ${opacity})`;
+            const isLight = themeRef.current === "light";
+            const opacity = (1 - dist / 110) * (isLight ? 0.35 : 0.22);
+            ctx.strokeStyle = isLight 
+              ? `rgba(99, 102, 241, ${opacity})`
+              : `rgba(147, 197, 253, ${opacity})`;
             ctx.lineWidth = 0.8;
             ctx.beginPath();
             ctx.moveTo(particles[a].x, particles[a].y);
@@ -104,8 +112,11 @@ export default function BackgroundCanvas() {
           const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
 
           if (distMouse < mouse.radius) {
+            const isLight = themeRef.current === "light";
             const opacity = (1 - distMouse / mouse.radius) * 0.35;
-            ctx.strokeStyle = `rgba(168, 85, 247, ${opacity})`;
+            ctx.strokeStyle = isLight 
+              ? `rgba(124, 58, 237, ${opacity})`
+              : `rgba(168, 85, 247, ${opacity})`;
             ctx.lineWidth = 1.2;
             ctx.beginPath();
             ctx.moveTo(particles[a].x, particles[a].y);
